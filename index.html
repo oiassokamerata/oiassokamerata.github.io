@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!-- oinarria: https://www.w3schools.com/w3css/tryw3css_templates_band.htm -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Oiasso Kamerata</title>
+<link rel="icon" type="image/x-icon" href="./img/favicon.jpg">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./css/w3.css">
+<link rel="stylesheet" href="./css/css">
+<link rel="stylesheet" href="./css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="./js/kamerata.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+<script src="https://www.w3schools.com/lib/w3data.js"></script>
+<!-- Material ikonoak erabiltzeko:
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+-->
+</head>
+<body>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v13.0" nonce="9uwmumaq"></script>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div id="topBar" class="w3-bar w3-white w3-card" style="height:84px;">
+    <a id="navButton" class="w3-bar-item w3-button w3-padding-large hide-topbar-large w3-right header-text" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large"><img src="./img/logo.png" style="height:60px">
+    <a href="#gu" class="w3-bar-item w3-button header-text hide-topbar-small lang" key="gu">
+    <a href="#musika" class="w3-bar-item w3-button header-text hide-topbar-small lang" key="musika">
+    <a href="#kontaktua" class="w3-bar-item w3-button header-text hide-topbar-small lang" key="kontaktua">
+	<a href="#berriak" class="w3-bar-item w3-button header-text hide-topbar-small lang" key="berriak">
+	<a class="w3-bar-item w3-button header-text w3-right hide-topbar-small langButton" onclick="ezarriHizkuntza('es')" key="es"><b>Castellano</b></a>
+    <a class="w3-bar-item w3-button header-text w3-right hide-topbar-small langButton" onclick="ezarriHizkuntza('eu')" key="eu"><b>Euskara</b></a>
+	<div class="vl w3-right hide-topbar-small"></div>
+  </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navMenu" class="w3-bar-block w3-white w3-hide hide-topbar-large w3-top w3-card animate-top-gentle" style="margin-top:84px">
+  <a href="#gu" class="w3-bar-item w3-button w3-padding-large lang" key="gu"></a>
+  <a href="#musika" class="w3-bar-item w3-button w3-padding-large lang" key="musika"></a>
+  <a href="#kontaktua" class="w3-bar-item w3-button w3-padding-large lang" key="kontaktua"></a>
+  <a href="#berriak" class="w3-bar-item w3-button w3-padding-large lang" key="berriak"></a>
+  <div class="hl"></div>
+  <a class="w3-bar-item w3-button w3-padding-large langButton" onclick="ezarriHizkuntza('eu')" key="eu"><b>Euskara</b></a>
+  <a class="w3-bar-item w3-button w3-padding-large langButton" onclick="ezarriHizkuntza('es')" key="es"><b>Castellano</b></a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:84px">
+  <!--
+  <img class="w3-black" src="./img/logo_txuria.svg" style="position: absolute; height: 600px; margin-left: -150px;">
+  -->
+
+  <!-- Automatic Slideshow Images -->
+  <div style="position:relative" class="w3-center w3-black">
+      <div class="mySlides" style="position:static">
+        <img src="./img/durango.jpg">
+      </div>
+      <div class="w3-center w3-black mySlides">  
+        <img src="./img/bergara.jpeg">
+      </div>
+      <div class="w3-center w3-black mySlides">  
+        <img src="./img/durango2.jpg">
+      </div>
+      <div class="w3-center w3-black mySlides">
+        <img src="./img/beasain.jpg">
+      </div>
+  </div>
+
+  <!-- Gu atala -->
+  <a class="anchor" id="gu"></a>
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
+    <h2 class="w3-wide">OIASSO KAMERATA</h2>
+    <p class="w3-justify w3-padding-top-32 lang" key="txapa_1"></p>
+	<p class="w3-justify lang" key="txapa_2"></p>
+	<p class="w3-justify lang" key="txapa_3"></p>
+	<p class="w3-justify lang" key="txapa_4"></p>
+    <p class="w3-justify lang" key="txapa_5"></p>
+    <p class="w3-justify lang" key="txapa_6"></p>
+    
+  </div>
+
+  <!-- Musika atala -->
+  <a class="anchor" id="musika"></a>
+  <div class="w3-black">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center lang" key="musika"></h2>
+      <h4 class="w3-opacity w3-center lang" key="programak"></h4>
+
+      <div class="row-programak w3-padding-top-32">
+        <div class="w3-third w3-margin-bottom" style="background: white">
+          <img src="./img/viaggio.jpg" style="width:100%;" class="w3-hover-opacity" onclick="erakutsiModala('viaggio')">
+          <div class="w3-container w3-white">
+            <p class="tituloProg"><b>Viaggio musicale</b></p>
+            <p class="w3-opacity">2016-2018</p>
+            <p>Corelli - Vivaldi - Puccini - Respighi - Rota</p>
+          </div>
+          <div style="height:70.5px"></div> <!-- txapuzatxoa botoiei tokia egiteko -->
+          <button class="w3-button w3-black ikusi-botoia lang" onclick="erakutsiModala('viaggio')" key="ikusi">
+        </div>
+        
+        <div class="w3-third w3-margin-bottom" style="background: white">
+          <img src="./img/god.jpg" style="width:100%" class="w3-hover-opacity" onclick="erakutsiModala('god')">
+          <div class="w3-container w3-white">
+            <p class="tituloProg"><b>God save the strings!</b></p>
+            <p class="w3-opacity">2019-2020</p>
+            <p>Purcell - Elgar - Walton - Holst</p>
+          </div>
+          <div style="height:70.5px"></div> <!-- txapuzatxoa botoiei tokia egiteko -->
+          <button class="w3-button w3-black ikusi-botoia lang" onclick="erakutsiModala('god')" key="ikusi">
+        </div>
+        
+        <div class="w3-third w3-margin-bottom" style="background: white">
+          <img src="./img/larrea.jpg" style="width:100%" class="w3-hover-opacity" onclick="erakutsiModala('larrea')">
+          <div class="w3-container w3-white">
+            <p class="tituloProg"><b>Valentín Larrea Yturbe</b></p>
+            <p class="w3-opacity">2020-<span class="lang" key="orain"></p>
+            <p class="lang" key="larrea_desk"></p>
+          </div>
+          <div style="height:70.5px"></div> <!-- txapuzatxoa botoiei tokia egiteko -->
+          <button class="w3-button w3-black ikusi-botoia lang" onclick="erakutsiModala('larrea')" key="ikusi">
+        </div>
+	  </div>
+      
+	  <div class="row-programak w3-padding-bottom-32">
+		<div class="w3-third w3-margin-bottom" style="background: white">
+          <img src="./img/tango.jpg" style="width:100%" class="w3-hover-opacity" onclick="erakutsiModala('tango')">
+          <div class="w3-container w3-white">
+            <p class="tituloProg"><b>Con aire de tango</b></p>
+            <p class="w3-opacity">2020-<span class="lang" key="orain"></p>
+            <p>Cardelús - Piazzolla - Albéniz - Williams - Guastavino - Romero - ...</p>
+          </div>
+          <div style="height:70.5px"></div> <!-- txapuzatxoa botoiei tokia egiteko -->
+          <button class="w3-button w3-black ikusi-botoia lang" onclick="erakutsiModala('tango');" key="ikusi">
+		</div>
+        
+        <div class="w3-third w3-margin-bottom" style="background: white; text-align:center">
+          <div class="w3-container w3-white">
+            <p class="w3-opacity lang" key="laster" style="margin: 5em 0">
+          </div>
+		</div>
+        <div class="w3-third w3-margin-bottom">
+          
+		</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Programen modala -->
+  <div id="programaModal" class="w3-modal" style="display:none">
+  </div>
+  
+  <!-- Kontaktua atala -->
+  <a class="anchor" id="kontaktua"></a>
+  <div class="w3-container w3-content w3-padding-64 w3-white" style="max-width:800px">
+    <h2 class="w3-wide w3-center lang" key="kontaktua"></h2>
+    <p class="w3-opacity w3-center"><i></i></p>
+    <div style="margin:auto; width:fit-content;" class="w3-large w3-padding-top-16">
+        <table>
+          <tr>
+            <td><i class="fa fa-envelope"></i></td>
+            <td>
+                maider.aizpurua@yahoo.es<br>
+                tomasrutivilar@gmail.com<br>
+                joseancontra@hotmail.es
+            </td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-phone"></i></td>
+            <td>(+34) 653715615</td>
+          </tr>
+        </table>
+    </div>
+  </div>
+  
+  <!-- Berriak atala -->
+  <a class="anchor" id="berriak"></a>
+  <div class="w3-black">
+      <div class="w3-container w3-content w3-padding-64 w3-black" style="max-width:800px">
+        <h2 class="w3-wide w3-center lang" key="berriak"></h2>
+        <div id="fbDiv">
+            <div class="fb-page" data-href="https://www.facebook.com/oiassokamerata" data-tabs="timeline" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/oiassokamerata" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/oiassokamerata">Oiasso Kamerata</a></blockquote></div>
+            <!--<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Foiassokamerata&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>-->
+            <span class='w3-opacity w3-small lang' key="fb_oharra" style="display:block">
+        </div>
+      </div>
+  </div>
+  
+  
+<!-- End Page Content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-light-grey w3-xxxlarge">
+  <a href="https://www.facebook.com/OiassoKamerata/" target="_blank"><i id="fbLink" class="fa fa-facebook"></i></a>
+  <a href="https://www.youtube.com/channel/UCZ3Fcx-EXwQ7FeCtStuh6Mg/" target="_blank"><i id="ytLink" class="fa fa-youtube-play" style="margin-left:16px"></i></a>
+</footer>
+
+
+</body></html>

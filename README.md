@@ -1,2 +1,6 @@
 # oiassokamerata.github.io
-Kamerataren web orria
+Oiasso Kamerataren web orria.
+
+Página web de la Oiasso Kamerata.
+
+<https://oiassokamerata.com>

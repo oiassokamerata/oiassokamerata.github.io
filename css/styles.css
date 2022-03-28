@@ -178,3 +178,7 @@ td p {
 #ytLink:hover {
     color: red;
 }
+
+#fbLink, #ytLink {
+    padding: 8px;
+}

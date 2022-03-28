@@ -18,7 +18,7 @@ $(document).ready(function() {
     var modal = document.getElementById('programaModal');
     window.onclick = function(event) {
       if (event.target == modal) {
-        modal.style.display = "none";
+        kenduElem(modal);
       }
     }
     
@@ -75,4 +75,9 @@ function erakutsiModala(izena) {
         ezarriHizkuntzaModal(elem, currentLang)
     })
     elem.show()
+}
+
+function kenduElem(elem) {
+    elem.style.display = "none";
+    elem.replaceChildren();
 }

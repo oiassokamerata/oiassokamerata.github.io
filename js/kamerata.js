@@ -93,7 +93,7 @@ function bilatuEmanaldia() {
             if (data > dataOrain) {
                 $('#em_data').html(emanaldia['data_' + currentLang])
                 $('#em_izena').html(emanaldia['izena'])
-                $('#em_esteka').attr('href', emanaldia['esteka'])
+                $('#em_esteka').attr('href', emanaldia['esteka_' + currentLang])
                 $('#hurrengoaFloat').show()
                 $('footer')[0].style.setProperty('padding-bottom', '120px', 'important');
                 break

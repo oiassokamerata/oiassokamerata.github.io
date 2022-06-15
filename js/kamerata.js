@@ -22,9 +22,11 @@ $(document).ready(function() {
       }
     }
     
+    bilatuEmanaldia()
+    
     var currentLang
     ezarriHizkuntza('eu')
-    
+      
 })
 
 // Used to toggle the menu on small screens when clicking on the menu button
@@ -59,10 +61,11 @@ function ezarriHizkuntza(lang) {
             $(this).show()
         }
     })
+    bilatuEmanaldia()
     currentLang = lang
 }
 
-function ezarriHizkuntzaModal(elem, lang) {
+function ezarriHizkuntzaElem(elem, lang) {
     $.getJSON('./languages/'+lang+'.json', function(data) {
         elem.find(".lang").each(function() {
             $(this).html(data[$(this).attr("key")]);
@@ -72,7 +75,7 @@ function ezarriHizkuntzaModal(elem, lang) {
 function erakutsiModala(izena) {
     var elem = $('#programaModal')
     elem.load('./'+izena+'.html', function() {
-        ezarriHizkuntzaModal(elem, currentLang)
+        ezarriHizkuntzaElem(elem, currentLang)
     })
     elem.show()
 }
@@ -80,4 +83,22 @@ function erakutsiModala(izena) {
 function kenduElem(elem) {
     elem.style.display = "none";
     elem.replaceChildren();
+}
+
+function bilatuEmanaldia() {
+    let dataOrain = new Date()
+    $.getJSON('./emanaldiak.json', function(emanaldiak) {
+        for (let emanaldia of emanaldiak) {
+            let data = new Date(...emanaldia['data_array'])
+            if (data > dataOrain) {
+                $('#em_data').html(emanaldia['data_' + currentLang])
+                $('#em_izena').html(emanaldia['izena'])
+                $('#em_esteka').attr('href', emanaldia['esteka'])
+                $('#hurrengoaFloat').show()
+                $('footer')[0].style.setProperty('padding-bottom', '120px', 'important');
+                break
+            }
+
+        }
+    })
 }

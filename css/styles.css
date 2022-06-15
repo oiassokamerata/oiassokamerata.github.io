@@ -188,7 +188,10 @@ td p {
 }
 
 #fbLink, #ytLink {
-    padding: 8px;
+    padding: 10px;
+    display: inline-block;
+    text-decoration: none;
+    line-height: 1;
 }
 
 #hurrengoaFloat {

@@ -69,8 +69,35 @@ a.anchor {
 
 .ikusi-botoia {
     position: absolute;
-    left: 16px;
+    right: 16px;
     bottom: 16px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+}
+
+.w3-top {
+    z-index: 2;
+}
+
+/*
+.big-hover:hover img {
+    opacity:0.60;
+}
+*/
+
+.big-hover:hover {
+    background-color:#ccc!important;
+}
+
+.big-hover:hover button {
+    /* w3-button bezala */
+    color:#000!important;
+    background-color:#ccc!important;
+}
+
+.hover-shadow-up:hover {
+    box-shadow:0 -4px 10px 0 rgba(0,0,0,0.2),0 -4px 20px 0 rgba(0,0,0,0.19)
 }
 
 .w3-third {
@@ -84,6 +111,12 @@ a.anchor {
         display: flex; 
         align-items: stretch; 
         gap: 16px;
+    }
+    .big-hover:hover {
+        transform: scale(1.07);
+        transition: all 0.3s ease;
+        z-index: 1;
+        cursor: pointer;
     }
 }
 
@@ -209,6 +242,7 @@ td p {
     margin: 0 20px;
     text-align: center;
     display: none;
+    z-index: 2;
 }
 
 .blue-grey-shadow {

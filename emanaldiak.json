@@ -6,5 +6,13 @@
         "data_es": "19 de junio",
         "esteka_eu": "https://amaiakz.sacatuentrada.es/eu/entradas/jaietakokontzertuaconciertode-fiestas",
         "esteka_es": "https://amaiakz.sacatuentrada.es/es/entradas/jaietakokontzertuaconciertode-fiestas"
+    },
+    {
+        "izena": "<span class='lang' key='gerra'></span>",
+        "data_array": [2022, 9, 22, 19],
+        "data_eu": "Urriak 22, Irun",
+        "data_es": "22 de octubre, Irun",
+        "esteka_eu": "https://amaiakz.sacatuentrada.es/eu/entradas/kamerata-oiasso-1",
+        "esteka_es": "https://amaiakz.sacatuentrada.es/es/entradas/kamerata-oiasso-1"
     }
 ]

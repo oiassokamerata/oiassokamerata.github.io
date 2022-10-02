@@ -22,8 +22,6 @@ $(document).ready(function() {
       }
     }
     
-    bilatuEmanaldia()
-    
     var currentLang
     ezarriHizkuntza('eu')
       
@@ -48,6 +46,9 @@ function myFunction() {
 }
 
 function ezarriHizkuntza(lang) {
+    currentLang = lang
+    bilatuEmanaldia()
+    
     $.getJSON('./languages/'+lang+'.json', function(data) {
         $(".lang").each(function() {
             $(this).html(data[$(this).attr("key")]);
@@ -61,8 +62,7 @@ function ezarriHizkuntza(lang) {
             $(this).show()
         }
     })
-    bilatuEmanaldia()
-    currentLang = lang
+
 }
 
 function ezarriHizkuntzaElem(elem, lang) {
@@ -87,18 +87,24 @@ function kenduElem(elem) {
 
 function bilatuEmanaldia() {
     let dataOrain = new Date()
-    $.getJSON('./emanaldiak.json', function(emanaldiak) {
-        for (let emanaldia of emanaldiak) {
-            let data = new Date(...emanaldia['data_array'])
-            if (data > dataOrain) {
-                $('#em_data').html(emanaldia['data_' + currentLang])
-                $('#em_izena').html(emanaldia['izena'])
-                $('#em_esteka').attr('href', emanaldia['esteka_' + currentLang])
-                $('#hurrengoaFloat').show()
-                $('footer')[0].style.setProperty('padding-bottom', '120px', 'important');
-                break
-            }
+    $.ajax({
+        url: './emanaldiak.json',
+        dataType: 'json',
+        async: false,
+        success: function(emanaldiak) {
+    //$.getJSON('./emanaldiak.json', function(emanaldiak) {
+            for (let emanaldia of emanaldiak) {
+                let data = new Date(...emanaldia['data_array'])
+                if (data > dataOrain) {
+                    $('#em_data').html(emanaldia['data_' + currentLang])
+                    $('#em_izena').html(emanaldia['izena'])
+                    $('#em_esteka').attr('href', emanaldia['esteka_' + currentLang])
+                    $('#hurrengoaFloat').show()
+                    $('footer')[0].style.setProperty('padding-bottom', '120px', 'important');
+                    break
+                }
 
+            }
         }
-    })
+    })    
 }

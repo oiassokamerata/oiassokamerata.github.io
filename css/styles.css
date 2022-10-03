@@ -88,6 +88,8 @@ a.anchor {
 
 .big-hover:hover {
     background-color:#ccc!important;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .big-hover:hover button {
@@ -114,9 +116,7 @@ a.anchor {
     }
     .big-hover:hover {
         transform: scale(1.07);
-        transition: all 0.3s ease;
         z-index: 1;
-        cursor: pointer;
     }
 }
 
@@ -210,6 +210,10 @@ td p {
     margin: auto;
     text-align: center;
     padding-top: 32px;
+}
+
+.uiLayer {
+    display:none!important;
 }
 
 #fbLink:hover {

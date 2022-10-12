@@ -60,11 +60,23 @@ a.anchor {
     top: 0;
     width: 100%;
     opacity: 0;
+    display: none;
 }
 
 .mySlides img {
     /*width: 100%; max-width: 1200px;*/
     max-width: 100%;
+}
+
+#fondoBeltza {
+    position:relative;
+    height: 600px;
+}
+
+@media (max-width:1200px){
+    #fondoBeltza {
+        height: calc(50vw - var(--scrollbar-width));
+    }
 }
 
 .ikusi-botoia {

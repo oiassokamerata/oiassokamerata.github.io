@@ -1,15 +1,20 @@
 $(document).ready(function() {
+    document.documentElement.style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + "px")
+    
     // Automatic Slideshow - change image every 5 seconds
-    var myIndex = 0;
-    carousel();
+    var myIndex = 1;
+    setTimeout(carousel, 5000); 
 
     function carousel() {
       var i;
       var x = document.getElementsByClassName("mySlides");
-      $(x[myIndex-1]).fadeTo(800, 0);
+      $(x[myIndex-1]).animate({opacity: 0}, 800, complete=function () {
+          $(this).hide()
+      })
       myIndex++;
       if (myIndex > x.length) {myIndex = 1}   
-      $(x[myIndex-1]).fadeTo(800, 1);
+      $(x[myIndex-1]).show();
+      $(x[myIndex-1]).animate({opacity: 1}, 800)
       setTimeout(carousel, 5000);    
     }
     

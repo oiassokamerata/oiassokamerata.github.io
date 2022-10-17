@@ -34,6 +34,10 @@ a.anchor {
     visibility: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @media (max-width:800px){
 	.hide-topbar-small{display:none!important}
 }

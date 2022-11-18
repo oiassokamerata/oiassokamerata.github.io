@@ -14,5 +14,18 @@
         "data_es": "22 de octubre, Irun",
         "esteka_eu": "https://amaiakz.sacatuentrada.es/eu/entradas/kamerata-oiasso-1",
         "esteka_es": "https://amaiakz.sacatuentrada.es/es/entradas/kamerata-oiasso-1"
+    },
+    {
+        "izena": "Barroko ala ez barroko?",
+        "data_array": [2022, 10, 27, 18, 30],
+        "data_eu": "Azaroak 27",
+        "asteko_eguna_eu": "igandea",
+        "data_es": "27 de noviembre",
+        "asteko_eguna_es": "domingo",
+        "herria": "Ordizia",
+        "aretoa": "Parrokia",
+        "esteka_eu": "https://www.ordizia.eus/kultura-albisteak/6169-barroko-aire-azaroko-igandeetako-hitzordua",
+        "esteka_es": "https://www.ordizia.eus/es/noticias-cultura/6170-barroko-aire-la-cita-de-los-domingos-de-noviembre",
+        "esteka_mota": "albistea"
     }
 ]

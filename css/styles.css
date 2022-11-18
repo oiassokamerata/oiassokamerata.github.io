@@ -197,6 +197,7 @@ td p {
     border-color:white!important;
     font-style: italic;
     animation: pulse-white 2s infinite;
+    padding-left: 1em;
 }
 
 .alignAuthor {

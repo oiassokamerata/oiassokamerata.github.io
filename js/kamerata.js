@@ -92,24 +92,29 @@ function kenduElem(elem) {
 
 function bilatuEmanaldia() {
     let dataOrain = new Date()
+    //$.getJSON('./emanaldiak.json', function(emanaldiak) {
     $.ajax({
         url: './emanaldiak.json',
         dataType: 'json',
         async: false,
         success: function(emanaldiak) {
-    //$.getJSON('./emanaldiak.json', function(emanaldiak) {
             for (let emanaldia of emanaldiak) {
                 let data = new Date(...emanaldia['data_array'])
                 if (data > dataOrain) {
-                    $('#em_data').html(emanaldia['data_' + currentLang])
+                    $('#em_data').html(emanaldia['data_' + currentLang] + ', ' + emanaldia['herria'])
                     $('#em_izena').html(emanaldia['izena'])
                     $('#em_esteka').attr('href', emanaldia['esteka_' + currentLang])
+                    if (emanaldia['esteka_mota'] != 'sarrerak') {
+                        $('#em_esteka').hide()
+                    }
                     $('#hurrengoaFloat').show()
                     $('footer')[0].style.setProperty('padding-bottom', '120px', 'important');
                     break
                 }
-
             }
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log(errorThrown)
         }
-    })    
+    })   
 }

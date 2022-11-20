@@ -3,6 +3,7 @@
     "musika": "MÚSICA",
     "kontaktua": "CONTACTO",
     "berriak": "ACTUALIDAD",
+    "agenda": "AGENDA",
     "txapa_1": "La Oiasso Kamerata es una orquesta de cuerda de Irun, que en la época romana se denominaba Oiasso. Comenzaron su andadura en 2014 bajo la dirección artística de <b>Raffaela Acella</b>. Desde el año 2016 la dirección artística recae en <b>Tomas Ruti Vilar</b> continuando con el objetivo de calidad sonora.",
     "txapa_2": "En su trayectoria la Kamerata se ha centrado en proponer experiencias musicales basadas en diferentes países o conceptos. De ahí nacen el Programa Latino, el <i>Viaggio Musicale</i>, <i>God save the strings!</i>, <i>Con aire de tango</i>, que cuenta con la gran violinista <b>Marina Beheretche</b> y <i>Guerra y Paz</i> dedicado a la música de compositores rusos.",
     "txapa_3": "En otro ámbito, destaca su aportación a la música vasca, con su interpretación de la música para cuerda del compositor Valentín Larrea.",
@@ -21,5 +22,7 @@
     "txaikovski": "Chaikovski",
     "informazioa": "Información",
     "sarrerak": "Entradas",
-    "bideoa": "Vídeo"
+    "bideoa": "Vídeo",
+    "emanaldiak": "Próximas actuaciones",
+    "gehitu": "Añadir al calendario"
 }

@@ -27,5 +27,18 @@
         "esteka_eu": "https://www.ordizia.eus/kultura-albisteak/6169-barroko-aire-azaroko-igandeetako-hitzordua",
         "esteka_es": "https://www.ordizia.eus/es/noticias-cultura/6170-barroko-aire-la-cita-de-los-domingos-de-noviembre",
         "esteka_mota": "albistea"
+    },
+    {
+        "izena": "<span class='lang' key='gerra'></span>",
+        "data_array": [2023, 2, 28, 19, 30],
+        "data_eu": "Martxoak 28",
+        "asteko_eguna_eu": "asteartea",
+        "data_es": "28 de marzo",
+        "asteko_eguna_es": "martes",
+        "herria": "Vitoria-Gasteiz",
+        "aretoa": "Vital Fundazioa Kulturunea",
+        "esteka_eu": "https://www.fundacionvital.eus/eu/astearte-musikalak-oiasso-kamerata-20230328",
+        "esteka_es": "https://www.fundacionvital.eus/martes-musicales-oiasso-kamerata-28032023",
+        "esteka_mota": "sarrerak"
     }
 ]

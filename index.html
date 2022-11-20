@@ -13,7 +13,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
-<script src="https://www.w3schools.com/lib/w3data.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/add-to-calendar-button@1/assets/css/atcb.min.css">
+<!--<script src="https://www.w3schools.com/lib/w3data.js"></script>-->
 <!-- Material ikonoak erabiltzeko:
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
@@ -31,7 +32,7 @@
     <a href="#gu" class="w3-bar-item w3-button header-text hide-topbar-small lang" key="gu">
     <a href="#musika" class="w3-bar-item w3-button header-text hide-topbar-small lang" key="musika">
     <a href="#kontaktua" class="w3-bar-item w3-button header-text hide-topbar-small lang" key="kontaktua">
-	<!--<a href="#berriak" class="w3-bar-item w3-button header-text hide-topbar-small lang" key="berriak"> -->
+	<!--<a href="#agenda" class="w3-bar-item w3-button header-text hide-topbar-small lang" key="agenda">-->
 	<a class="w3-bar-item w3-button header-text w3-right hide-topbar-small langButton" onclick="ezarriHizkuntza('es')" key="es"><b>Castellano</b></a>
     <a class="w3-bar-item w3-button header-text w3-right hide-topbar-small langButton" onclick="ezarriHizkuntza('eu')" key="eu"><b>Euskara</b></a>
 	<div class="vl w3-right hide-topbar-small"></div>
@@ -43,7 +44,7 @@
   <a href="#gu" class="w3-bar-item w3-button w3-padding-large lang" key="gu"></a>
   <a href="#musika" class="w3-bar-item w3-button w3-padding-large lang" key="musika"></a>
   <a href="#kontaktua" class="w3-bar-item w3-button w3-padding-large lang" key="kontaktua"></a>
-  <!-- <a href="#berriak" class="w3-bar-item w3-button w3-padding-large lang" key="berriak"></a> -->
+  <!--<a href="#agenda" class="w3-bar-item w3-button w3-padding-large lang" key="agenda"></a>-->
   <div class="hl"></div>
   <a class="w3-bar-item w3-button w3-padding-large langButton" onclick="ezarriHizkuntza('eu')" key="eu"><b>Euskara</b></a>
   <a class="w3-bar-item w3-button w3-padding-large langButton" onclick="ezarriHizkuntza('es')" key="es"><b>Castellano</b></a>
@@ -200,19 +201,63 @@
     </div>
   </div>
   
-  <!-- Berriak atala -->
-  <a class="anchor" id="berriak"></a>
-  <div class="w3-black"  style="display:none">
+  <!-- Agenda atala -->
+  <!--
+  <a class="anchor" id="agenda"></a>
+  <div class="w3-black">
       <div class="w3-container w3-content w3-padding-64 w3-black" style="max-width:800px">
-        <h2 class="w3-wide w3-center lang" key="berriak"></h2>
-        <!--<div id="fbDiv">
-            <div class="fb-page" data-href="https://www.facebook.com/oiassokamerata" data-tabs="timeline" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/oiassokamerata" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/oiassokamerata">Oiasso Kamerata</a></blockquote></div>
-            <!--<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Foiassokamerata&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-            <span class='w3-opacity w3-small lang' key="fb_oharra" style="display:block">
-        </div>-->
+        <h2 class="w3-wide w3-center lang" key="agenda"></h2>
+        <h4 class="w3-opacity w3-center lang" key="emanaldiak"></h4>
+        <div class="w3-padding-top-32">
+            <div>
+                <p class="tituloProg"><b>Barroko ala ez barroko?</b></p>
+                <p>
+                    <div style="display:inline-block; margin-right: 20px">
+                        <i class="fa fa-calendar" style="padding-right:10px;"></i><span id="agenda_data">Azaroak 27, igandea</span>
+                    </div>
+                    <div style="display:inline-block; margin-right: 20px">
+                        <i class="fa fa-clock-o" style="padding-right:10px;"></i><span id="agenda_ordua">18:30</span>
+                    </div>
+                    <div style="display:inline-block; margin-right: 20px">
+                        <i class="fa fa-map-marker" style="padding-right:10px;"></i><span id="agenda_tokia">Parrokia, Ordizia</span>
+                    </div>
+                </p>
+                <div>
+                    <a id="em_esteka" target="_blank" class="w3-button w3-border w3-padding w3-round-xxlarge agenda-button"><i class="fa fa-shopping-cart"></i> <span class="lang" key="sarrerak"></a>
+                    <a id="calendar-proba" class="w3-button w3-border w3-padding w3-round-xxlarge agenda-button"><i class="fa fa-calendar-plus-o"></i> <span class="lang" key="gehitu"></a>
+                    <div class="atcb" style="display:none;">
+                        {
+                            "name":"Add the title of your event",
+                            "startDate":"2022-02-21",
+                            "options":[
+                              "Google"
+                            ]
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="emanaldi-sep"></div>
+            <div>
+            <p class="tituloProg"><b>Gerra eta Bakea</b></p>
+                <p>
+                    <div style="display:inline-block; margin-right: 20px">
+                        <i class="fa fa-calendar" style="padding-right:10px;"></i><span id="agenda_data">Martxoak 28, asteartea</span>
+                    </div>
+                    <div style="display:inline-block; margin-right: 20px">
+                        <i class="fa fa-clock-o" style="padding-right:10px;"></i><span id="agenda_ordua">19:30</span>
+                    </div>
+                    <div style="display:inline-block; margin-right: 20px">
+                        <i class="fa fa-map-marker" style="padding-right:10px;"></i><span id="agenda_tokia">Vital Fundazioa Kulturunea, Vitoria-Gasteiz</span>
+                    </div>
+                </p>
+                <div>
+                    <a id="em_esteka" target="_blank" class="w3-button w3-border w3-padding w3-round-xxlarge agenda-button"><i class="fa fa-shopping-cart"></i> <span class="lang" key="sarrerak"></a>
+                </div>
+            </div>
+        </div>
       </div>
   </div>
-  
+  -->
   
 <!-- End Page Content -->
 </div>
@@ -230,16 +275,20 @@
 </footer>
 
 <!-- Hurrengo emanaldia -->
-<div id="hurrengoaFloat" class="w3-blue-grey w3-round-xxlarge w3-padding blue-grey-shadow">
-  <!--<div class="blob white"></div>-->
-  <div>
-    <span style="vertical-align:-2px">
-        <i class="fa fa-calendar" style="padding-right:10px;"></i><span id="em_data"></span>&emsp;
-        <b><span class="tituloProg" id="em_izena"></b></span>
-    </span>
-    <a id="em_esteka" target="_blank" class="w3-button w3-blue-grey w3-border  w3-padding-small w3-round-xxlarge sarrerakButton"><i class="fa fa-shopping-cart"></i> <span class="lang" key="sarrerak"></a>
-    
+<div id="hurrengoaFloat" class="w3-light-grey w3-padding-large green-shadow-up">
+  <div style="display:flex" class="hurrengoa-flex">
+      <div>
+          <div style="display:inline-block">
+            <div class="blob green" style="display:inline-block"></div>
+            <b><span class="tituloProg" id="em_izena"></b></span>
+          </div>
+          <div style="display:inline-block; margin-left:10px;">
+            <span id="em_data"></span>
+          </div>
+      </div>
+      <a id="info-botoia" target="_blank" class="w3-button w3-black info-botoia"><i class="fa fa-info"></i></a>
   </div>
 </div> 
 
+<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@1" async defer></script>
 </body></html>

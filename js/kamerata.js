@@ -29,7 +29,20 @@ $(document).ready(function() {
     
     var currentLang
     ezarriHizkuntza('eu')
-      
+    
+    const config = {
+    name: "Reminder to star the add to calendar button repo",
+    description: "Check out the maybe easiest way to include add to calendar buttons to your website at:<br>→ [url]https://github.com/add2cal/add-to-calendar-button[/url]",
+    startDate: "2023-01-14",
+    endDate: "2023-01-18",
+    options: ["Google", "iCal"],
+    timeZone: "Europe/Berlin",
+    trigger: "click",
+    iCalFileName: "Reminder-Event",
+  };
+  const button = document.getElementById('calendar-proba');
+  button.addEventListener('click', () => atcb_action(config, button));
+  console.log(button)
 })
 
 // Used to toggle the menu on small screens when clicking on the menu button
@@ -103,9 +116,10 @@ function bilatuEmanaldia() {
                 if (data > dataOrain) {
                     $('#em_data').html(emanaldia['data_' + currentLang] + ', ' + emanaldia['herria'])
                     $('#em_izena').html(emanaldia['izena'])
-                    $('#em_esteka').attr('href', emanaldia['esteka_' + currentLang])
+                    //$('#em_esteka').attr('href', emanaldia['esteka_' + currentLang])
+                    /$('#info-botoia').attr('href', emanaldia['esteka_' + currentLang])
                     if (emanaldia['esteka_mota'] != 'sarrerak') {
-                        $('#em_esteka').hide()
+                        //$('#em_esteka').hide()
                     }
                     $('#hurrengoaFloat').show()
                     $('footer')[0].style.setProperty('padding-bottom', '120px', 'important');

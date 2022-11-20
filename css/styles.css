@@ -57,6 +57,11 @@ html {
   margin: 0 24px;
 }
 
+.emanaldi-sep {
+    border-top: 1px solid white;
+    margin: 32px 0;
+}
+
 .animate-top-gentle{animation:animatetop 0.4s}@keyframes animatetop{from{top:-10px;opacity:0} to{top:0;opacity:1}}
 
 .mySlides {
@@ -81,6 +86,16 @@ html {
     #fondoBeltza {
         height: calc(50vw - var(--scrollbar-width));
     }
+}
+
+.info-botoia {
+    display:inline-block;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    padding: 6px 0px;
+    margin-left: 15px;
+    flex-shrink: 0
 }
 
 .ikusi-botoia {
@@ -120,7 +135,7 @@ html {
 
 .w3-third {
     position: relative;
-    max-width: 400px;
+    max-width: 400px; /* HAU ALDATU TXARTELAK MOBILETAN FINAGOAK EGITEKO*/
     float: none;
 }
 
@@ -192,12 +207,10 @@ td p {
     border-color: black!important;
 }
 
-.sarrerakButton {
+.agenda-button {
+    font-style: italic;
     display:inline-block;
     border-color:white!important;
-    font-style: italic;
-    animation: pulse-white 2s infinite;
-    padding-left: 1em;
 }
 
 .alignAuthor {
@@ -250,7 +263,8 @@ td p {
 
 #hurrengoaFloat {
     position: fixed;
-    bottom: 30px;
+    bottom: 0px;
+    width: 100%;
     /*
     left: 50%;
     transform: translateX(-50%);
@@ -260,14 +274,22 @@ td p {
     width: -webkit-fill-available; 
     width: stretch;
     */
-    margin: 0 20px;
     text-align: center;
     display: none;
     z-index: 2;
 }
 
+.hurrengoa-flex {
+    justify-content: center;
+    align-items: center;
+}
+
 .blue-grey-shadow {
     box-shadow:0 4px 10px 0 rgba(96,125,139,0.5),0 4px 20px 0 rgba(96,125,139,0.45)
+}
+
+.green-shadow-up {
+    box-shadow: 0 4px 10px 0 rgba(16, 86, 70, 0.5), 0 4px 20px 0 rgba(16, 86, 70, 0.45)
 }
 
 /*https://www.florin-pop.com/blog/2019/03/css-pulse-effect/*/
@@ -302,5 +324,28 @@ td p {
   100% {
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+.blob.green {
+  background: rgba(51, 217, 178, 1);
+  box-shadow: 0 0 0 0 rgba(51, 217, 178, 1);
+  animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+  0% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(51, 217, 178, 0.7);
+  }
+  
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(51, 217, 178, 0);
+  }
+  
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(51, 217, 178, 0);
   }
 }

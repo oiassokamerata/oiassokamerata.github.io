@@ -30,6 +30,32 @@
     },
     {
         "izena": "<span class='lang' key='gerra'></span>",
+        "data_array": [2023, 2, 4, 20, 0],
+        "data_eu": "Martxoak 4",
+        "asteko_eguna_eu": "larunbata",
+        "data_es": "4 de marzo",
+        "asteko_eguna_es": "sábado",
+        "herria": "Andoain",
+        "aretoa": "Bastero Kulturgunea",
+        "esteka_eu": "https://tickets.kutxabank.es/#/eu/detalle/BA230304@Janto_KB/BA",
+        "esteka_es": "https://tickets.kutxabank.es/#/es/detalle/BA230304@Janto_KB/BA",
+        "esteka_mota": "sarrerak"
+    },
+    {
+        "izena": "Iñaki Gezala & Oiasso Kamerata",
+        "data_array": [2023, 2, 19, 19, 0],
+        "data_eu": "Martxoak 19",
+        "asteko_eguna_eu": "igandea",
+        "data_es": "19 de marzo",
+        "asteko_eguna_es": "domingo",
+        "herria": "Irun",
+        "aretoa": "Amaia KZ",
+        "esteka_eu": "https://www.irun.org/eu/agenda/ekintzak/8097-ricardo-requejo-ganbara-zikloa-inaki-gezala-oiasso-kamerata",
+        "esteka_es": "https://www.irun.org/es/agenda/eventos/8096-ciclo-de-camara-ricardo-requejo-inaki-gezala-oiasso-kamerata",
+        "esteka_mota": "sarrerak"
+    },
+    {
+        "izena": "<span class='lang' key='gerra'></span>",
         "data_array": [2023, 2, 28, 19, 30],
         "data_eu": "Martxoak 28",
         "asteko_eguna_eu": "asteartea",

@@ -41,7 +41,7 @@ $(document).ready(function() {
     iCalFileName: "Reminder-Event",
   };
   const button = document.getElementById('calendar-proba');
-  button.addEventListener('click', () => atcb_action(config, button));
+  //button.addEventListener('click', () => atcb_action(config, button));  AKTIBATU BERRIZ EGUTEGIA PROBATZEKO
   console.log(button)
 })
 

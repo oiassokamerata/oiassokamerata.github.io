@@ -27,6 +27,14 @@ $(document).ready(function() {
       }
     }
     
+    var gehi_button = $('#programa_gehi')
+    var gehi_div = $('#programa_gehi_div')
+    var prog_hidden_row = $('#prog_hidden_row')
+    gehi_button.click(function() {
+        prog_hidden_row.show()
+        gehi_div.hide()
+    })
+    
     var currentLang
     ezarriHizkuntza('eu')
     

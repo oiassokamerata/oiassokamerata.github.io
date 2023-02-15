@@ -121,6 +121,8 @@ html {
     background-color:#ccc!important;
     cursor: pointer;
     transition: all 0.3s ease;
+    transform: scale(1.07);
+    z-index: 1;
 }
 
 .big-hover:hover button {
@@ -135,8 +137,9 @@ html {
 
 .w3-third {
     position: relative;
-    max-width: 400px; /* HAU ALDATU TXARTELAK MOBILETAN FINAGOAK EGITEKO*/
+    max-width: min(400px, 90%); /* HAU ALDATU TXARTELAK MOBILETAN FINAGOAK EGITEKO. LEHEN 400px*/
     float: none;
+    /*width: calc(33.33% - 16px)*/
 }
 
 @media (min-width:651px){
@@ -145,10 +148,12 @@ html {
         align-items: stretch; 
         gap: 16px;
     }
+    /* HEMENDIK KENDU DUT, MOBILETAN ERE EFEKTUA EGITEKO
     .big-hover:hover {
         transform: scale(1.07);
         z-index: 1;
     }
+    */
 }
 
 @media (max-width:650px) {

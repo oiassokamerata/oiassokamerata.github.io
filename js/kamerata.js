@@ -38,19 +38,6 @@ $(document).ready(function() {
     var currentLang
     ezarriHizkuntza('eu')
     
-    const config = {
-    name: "Reminder to star the add to calendar button repo",
-    description: "Check out the maybe easiest way to include add to calendar buttons to your website at:<br>→ [url]https://github.com/add2cal/add-to-calendar-button[/url]",
-    startDate: "2023-01-14",
-    endDate: "2023-01-18",
-    options: ["Google", "iCal"],
-    timeZone: "Europe/Berlin",
-    trigger: "click",
-    iCalFileName: "Reminder-Event",
-  };
-  const button = document.getElementById('calendar-proba');
-  //button.addEventListener('click', () => atcb_action(config, button));  AKTIBATU BERRIZ EGUTEGIA PROBATZEKO
-  console.log(button)
 })
 
 // Used to toggle the menu on small screens when clicking on the menu button
@@ -113,6 +100,9 @@ function kenduElem(elem) {
 
 function bilatuEmanaldia() {
     let dataOrain = new Date()
+    var hurrengoaJarrita = false
+    var zerrendaDiv = $('#emanaldi-lista')
+    zerrendaDiv.empty()
     //$.getJSON('./emanaldiak.json', function(emanaldiak) {
     $.ajax({
         url: './emanaldiak.json',
@@ -122,16 +112,75 @@ function bilatuEmanaldia() {
             for (let emanaldia of emanaldiak) {
                 let data = new Date(...emanaldia['data_array'])
                 if (data > dataOrain) {
-                    $('#em_data').html(emanaldia['data_' + currentLang] + ', ' + emanaldia['herria'])
-                    $('#em_izena').html(emanaldia['izena'])
-                    //$('#em_esteka').attr('href', emanaldia['esteka_' + currentLang])
-                    /$('#info-botoia').attr('href', emanaldia['esteka_' + currentLang])
-                    if (emanaldia['esteka_mota'] != 'sarrerak') {
-                        //$('#em_esteka').hide()
+                    if (!hurrengoaJarrita) {
+                        $('#em_data').html(emanaldia['data_' + currentLang] + ', ' + emanaldia['herria'])
+                        $('#em_izena').html(emanaldia['izena_' + currentLang])
+                        $('#hurrengoaFloat').show()
+                        $('footer')[0].style.setProperty('padding-bottom', '120px', 'important');
+                        hurrengoaJarrita = true
                     }
-                    $('#hurrengoaFloat').show()
-                    $('footer')[0].style.setProperty('padding-bottom', '120px', 'important');
-                    break
+                    if (zerrendaDiv.children().length > 0) {
+                        zerrendaDiv.append('<div class="emanaldi-sep"></div>')
+                    }
+                    let atributuak = ''
+                    let ikonoa = ''
+                    if ('programa' in emanaldia) {
+                        atributuak = ' onclick="erakutsiModala(\'' + emanaldia['programa'] + '\')" style="cursor:pointer;"'
+                        ikonoa = '&ensp;<i class="fa fa-chevron-circle-right"></i>'
+                    }
+                    let orduaNormal = data.toLocaleTimeString('es-ES', {hour: '2-digit', minute:'2-digit'})
+                    let emanaldiDiv = $(
+                        '<div>'+
+                            '<p class="tituloProg"' + atributuak + '><b>' + emanaldia['izena_' + currentLang] + '</b>' + ikonoa + '</p>' +
+                            '<div class="emanaldi-info">' +
+                                '<div>' +
+                                    '<i class="fa fa-calendar" style="padding-right:10px;"></i>' + 
+                                    emanaldia['data_' + currentLang] + ', ' + emanaldia['asteko_eguna_' + currentLang] +
+                                '</div>' +
+                                '<div>' +
+                                    '<i class="fa fa-clock-o" style="padding-right:10px;"></i>' +
+                                    orduaNormal +
+                                '</div>' +
+                                '<div>' +
+                                    '<i class="fa fa-map-marker" style="padding-right:10px;"></i>' +
+                                    emanaldia['aretoa'] + ', ' + emanaldia['herria'] +
+                                '</div>' +
+                            '</div>' +
+                        '</div>')
+                    switch (emanaldia['esteka_mota']) {
+                        case 'sarrerak':
+                            var botoiEdukia = '<i class="fa fa-shopping-cart"></i> <span class="lang" key="sarrerak">'
+                            break
+                    }
+                    let botoiakDiv = $(
+                        '<div>' +
+                            '<a href=' + emanaldia['esteka_' + currentLang] + ' target="_blank" class="w3-button w3-border w3-padding w3-round-xxlarge agenda-button">' + botoiEdukia + '</a>' +
+                        '</div>')
+                    let gehituBotoia = $(
+                        '<a class="w3-button w3-border w3-padding w3-round-xxlarge agenda-button"><i class="fa fa-calendar-plus-o"></i> <span class="lang" key="gehitu"></a>')
+                    let bukaeraData = new Date(data.getTime());
+                    bukaeraData.setHours(data.getHours() + 1);
+                    let bukaeraOrdua = bukaeraData.toLocaleTimeString('es-ES', {hour: '2-digit', minute:'2-digit'})
+                    let em_config = {
+                        name: emanaldia['izena_' + currentLang],
+                        description: "Oiasso Kamerataren kontzertua / Concierto de la Oiasso Kamerata",
+                        startDate: data.toISOString().split('T')[0],
+                        startTime: orduaNormal,
+                        endTime: bukaeraOrdua,
+                        location: emanaldia['aretoa'] + ', ' + emanaldia['herria'],
+                        options: ["Google", "Apple", "Outlook.com" ,"iCal"],
+                        timeZone: "Europe/Berlin",
+                        trigger: "click",
+                    };
+                    let gehituFunc = function (config, botoia) {
+                        console.log(config)
+                        console.log(botoia)
+                        atcb_action(config, botoia)
+                    }.bind(this, em_config, gehituBotoia[0])
+                    gehituBotoia.click(gehituFunc)
+                    botoiakDiv.append(gehituBotoia)
+                    emanaldiDiv.append(botoiakDiv)
+                    zerrendaDiv.append(emanaldiDiv)
                 }
             }
         },

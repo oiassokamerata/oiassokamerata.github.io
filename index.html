@@ -32,7 +32,7 @@
     <a href="#gu" class="w3-bar-item w3-button header-text hide-topbar-small lang" key="gu">
     <a href="#musika" class="w3-bar-item w3-button header-text hide-topbar-small lang" key="musika">
     <a href="#kontaktua" class="w3-bar-item w3-button header-text hide-topbar-small lang" key="kontaktua">
-	<!--<a href="#agenda" class="w3-bar-item w3-button header-text hide-topbar-small lang" key="agenda">-->
+	<a href="#agenda" class="w3-bar-item w3-button header-text hide-topbar-small lang" key="agenda">
 	<a class="w3-bar-item w3-button header-text w3-right hide-topbar-small langButton" onclick="ezarriHizkuntza('es')" key="es"><b>Castellano</b></a>
     <a class="w3-bar-item w3-button header-text w3-right hide-topbar-small langButton" onclick="ezarriHizkuntza('eu')" key="eu"><b>Euskara</b></a>
 	<div class="vl w3-right hide-topbar-small"></div>
@@ -44,7 +44,7 @@
   <a href="#gu" class="w3-bar-item w3-button w3-padding-large lang" key="gu"></a>
   <a href="#musika" class="w3-bar-item w3-button w3-padding-large lang" key="musika"></a>
   <a href="#kontaktua" class="w3-bar-item w3-button w3-padding-large lang" key="kontaktua"></a>
-  <!--<a href="#agenda" class="w3-bar-item w3-button w3-padding-large lang" key="agenda"></a>-->
+  <a href="#agenda" class="w3-bar-item w3-button w3-padding-large lang" key="agenda"></a>
   <div class="hl"></div>
   <a class="w3-bar-item w3-button w3-padding-large langButton" onclick="ezarriHizkuntza('eu')" key="eu"><b>Euskara</b></a>
   <a class="w3-bar-item w3-button w3-padding-large langButton" onclick="ezarriHizkuntza('es')" key="es"><b>Castellano</b></a>
@@ -231,62 +231,15 @@
   </div>
   
   <!-- Agenda atala -->
-  <!--
   <a class="anchor" id="agenda"></a>
   <div class="w3-black">
       <div class="w3-container w3-content w3-padding-64 w3-black" style="max-width:800px">
         <h2 class="w3-wide w3-center lang" key="agenda"></h2>
         <h4 class="w3-opacity w3-center lang" key="emanaldiak"></h4>
-        <div class="w3-padding-top-32">
-            <div>
-                <p class="tituloProg"><b>Barroko ala ez barroko?</b></p>
-                <p>
-                    <div style="display:inline-block; margin-right: 20px">
-                        <i class="fa fa-calendar" style="padding-right:10px;"></i><span id="agenda_data">Azaroak 27, igandea</span>
-                    </div>
-                    <div style="display:inline-block; margin-right: 20px">
-                        <i class="fa fa-clock-o" style="padding-right:10px;"></i><span id="agenda_ordua">18:30</span>
-                    </div>
-                    <div style="display:inline-block; margin-right: 20px">
-                        <i class="fa fa-map-marker" style="padding-right:10px;"></i><span id="agenda_tokia">Parrokia, Ordizia</span>
-                    </div>
-                </p>
-                <div>
-                    <a id="em_esteka" target="_blank" class="w3-button w3-border w3-padding w3-round-xxlarge agenda-button"><i class="fa fa-shopping-cart"></i> <span class="lang" key="sarrerak"></a>
-                    <a id="calendar-proba" class="w3-button w3-border w3-padding w3-round-xxlarge agenda-button"><i class="fa fa-calendar-plus-o"></i> <span class="lang" key="gehitu"></a>
-                    <div class="atcb" style="display:none;">
-                        {
-                            "name":"Add the title of your event",
-                            "startDate":"2022-02-21",
-                            "options":[
-                              "Google"
-                            ]
-                        }
-                    </div>
-                </div>
-            </div>
-            <div class="emanaldi-sep"></div>
-            <div>
-            <p class="tituloProg"><b>Gerra eta Bakea</b></p>
-                <p>
-                    <div style="display:inline-block; margin-right: 20px">
-                        <i class="fa fa-calendar" style="padding-right:10px;"></i><span id="agenda_data">Martxoak 28, asteartea</span>
-                    </div>
-                    <div style="display:inline-block; margin-right: 20px">
-                        <i class="fa fa-clock-o" style="padding-right:10px;"></i><span id="agenda_ordua">19:30</span>
-                    </div>
-                    <div style="display:inline-block; margin-right: 20px">
-                        <i class="fa fa-map-marker" style="padding-right:10px;"></i><span id="agenda_tokia">Vital Fundazioa Kulturunea, Vitoria-Gasteiz</span>
-                    </div>
-                </p>
-                <div>
-                    <a id="em_esteka" target="_blank" class="w3-button w3-border w3-padding w3-round-xxlarge agenda-button"><i class="fa fa-shopping-cart"></i> <span class="lang" key="sarrerak"></a>
-                </div>
-            </div>
-        </div>
+        <div id="emanaldi-lista" class="w3-padding-top-32"></div>
       </div>
   </div>
-  -->
+
   
 <!-- End Page Content -->
 </div>
@@ -315,7 +268,7 @@
             <span id="em_data"></span>
           </div>
       </div>
-      <a id="info-botoia" target="_blank" class="w3-button w3-black info-botoia"><i class="fa fa-info"></i></a>
+      <a href="#agenda" class="w3-button w3-black info-botoia"><i class="fa fa-info"></i></a>
   </div>
 </div> 
 

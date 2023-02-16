@@ -59,7 +59,8 @@ html {
 
 .emanaldi-sep {
     border-top: 1px solid white;
-    margin: 32px 0;
+    margin-top: 24px;
+    margin-bottom: 32px;
 }
 
 .animate-top-gentle{animation:animatetop 0.4s}@keyframes animatetop{from{top:-10px;opacity:0} to{top:0;opacity:1}}
@@ -215,16 +216,24 @@ td p {
 .agenda-button {
     font-style: italic;
     display:inline-block;
-    border-color:white!important;
+    /*border-color:white!important;*/ /*ez dakit zein dudan nahiago*/
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.emanaldi-info div{
+    display:inline-block; 
+    margin-right: 20px;
+}
+
+.emanaldi-info {
+    margin: 16px 0;
 }
 
 .alignAuthor {
     padding-top: 11px;
 }    
 
-.row-programak img {
-    cursor: pointer;
-}
 /*
 @media (max-width:550px) {
     #fbDiv {

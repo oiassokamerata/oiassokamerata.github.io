@@ -261,19 +261,29 @@ td p {
 }
 
 #fbLink:hover {
-    color: #1977F3;
+    color: #0a5ac2; /* #1977F3 % 40 */
+}
+
+#igLink:hover {
+	color: #b3196e; /* #DF248C % 40 */
 }
 
 #ytLink:hover {
-    color: red;
+    color: #cc0000; /* red % 40 */
 }
 
-#fbLink, #ytLink {
+#fbLink, #igLink, #ytLink {
     padding: 10px;
     display: inline-block;
     text-decoration: none;
     line-height: 1;
 }
+
+/* Logoa atzeko plano moduan erabiltzeko
+footer {
+	background-image: url(../img/logo_txuria.svg);
+}
+*/
 
 #hurrengoaFloat {
     position: fixed;

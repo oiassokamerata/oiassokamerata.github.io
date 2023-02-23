@@ -147,15 +147,18 @@ function bilatuEmanaldia() {
                                 '</div>' +
                             '</div>' +
                         '</div>')
-                    switch (emanaldia['esteka_mota']) {
-                        case 'sarrerak':
-                            var botoiEdukia = '<i class="fa fa-shopping-cart"></i> <span class="lang" key="sarrerak">'
-                            break
-                    }
-                    let botoiakDiv = $(
-                        '<div>' +
-                            '<a href=' + emanaldia['esteka_' + currentLang] + ' target="_blank" class="w3-button w3-border w3-padding w3-round-xxlarge agenda-button">' + botoiEdukia + '</a>' +
-                        '</div>')
+					let botoiakDiv = $('<div></div>')
+					if ('esteka_eu' in emanaldia) {
+						switch (emanaldia['esteka_mota']) {
+							case 'sarrerak':
+								var botoiEdukia = '<i class="fa fa-shopping-cart"></i> <span class="lang" key="sarrerak">'
+								break
+						}
+						let estekaBotoia = $(
+							'<a href=' + emanaldia['esteka_' + currentLang] + ' target="_blank" class="w3-button w3-border w3-padding w3-round-xxlarge agenda-button">' + botoiEdukia + '</a>'
+							)
+						botoiakDiv.append(estekaBotoia)
+					}
                     let gehituBotoia = $(
                         '<a class="w3-button w3-border w3-padding w3-round-xxlarge agenda-button"><i class="fa fa-calendar-plus-o"></i> <span class="lang" key="gehitu"></a>')
                     let bukaeraData = new Date(data.getTime());
@@ -173,8 +176,6 @@ function bilatuEmanaldia() {
                         trigger: "click",
                     };
                     let gehituFunc = function (config, botoia) {
-                        console.log(config)
-                        console.log(botoia)
                         atcb_action(config, botoia)
                     }.bind(this, em_config, gehituBotoia[0])
                     gehituBotoia.click(gehituFunc)

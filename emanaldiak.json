@@ -57,6 +57,18 @@
         "esteka_es": "https://www.irun.org/es/agenda/eventos/8096-ciclo-de-camara-ricardo-requejo-inaki-gezala-oiasso-kamerata",
         "esteka_mota": "sarrerak"
     },
+	{
+        "izena_eu": "Guda eta Bakea",
+        "izena_es": "Guerra y Paz",
+        "programa": "gerra",
+        "data_array": [2023, 2, 25, 19, 0],
+        "data_eu": "Martxoak 25",
+        "asteko_eguna_eu": "larunbata",
+        "data_es": "25 de marzo",
+        "asteko_eguna_es": "sábado",
+        "herria": "Bera",
+        "aretoa": "Kultur etxea"
+    },
     {
         "izena_eu": "Guda eta Bakea",
         "izena_es": "Guerra y Paz",

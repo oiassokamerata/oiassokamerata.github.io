@@ -31,7 +31,7 @@
     <a href="#gu" class="w3-bar-item w3-button header-text hide-topbar-small lang" key="gu">
     <a href="#musika" class="w3-bar-item w3-button header-text hide-topbar-small lang" key="musika">
     <a href="#kontaktua" class="w3-bar-item w3-button header-text hide-topbar-small lang" key="kontaktua">
-	<a href="#agenda" class="w3-bar-item w3-button header-text hide-topbar-small lang" key="agenda">
+	<a href="#agenda" id="agendaTopbar" class="w3-bar-item w3-button header-text hide-topbar-small lang" key="agenda">
 	<a class="w3-bar-item w3-button header-text w3-right hide-topbar-small langButton" onclick="ezarriHizkuntza('es')" key="es"><b>Castellano</b></a>
     <a class="w3-bar-item w3-button header-text w3-right hide-topbar-small langButton" onclick="ezarriHizkuntza('eu')" key="eu"><b>Euskara</b></a>
 	<div class="vl w3-right hide-topbar-small"></div>
@@ -43,7 +43,7 @@
   <a href="#gu" class="w3-bar-item w3-button w3-padding-large lang" key="gu"></a>
   <a href="#musika" class="w3-bar-item w3-button w3-padding-large lang" key="musika"></a>
   <a href="#kontaktua" class="w3-bar-item w3-button w3-padding-large lang" key="kontaktua"></a>
-  <a href="#agenda" class="w3-bar-item w3-button w3-padding-large lang" key="agenda"></a>
+  <a href="#agenda" id="agendaNavmenu" class="w3-bar-item w3-button w3-padding-large lang" key="agenda"></a>
   <div class="hl"></div>
   <a class="w3-bar-item w3-button w3-padding-large langButton" onclick="ezarriHizkuntza('eu')" key="eu"><b>Euskara</b></a>
   <a class="w3-bar-item w3-button w3-padding-large langButton" onclick="ezarriHizkuntza('es')" key="es"><b>Castellano</b></a>
@@ -231,7 +231,7 @@
   
   <!-- Agenda atala -->
   <a class="anchor" id="agenda"></a>
-  <div class="w3-black">
+  <div id="agendaDiv" class="w3-black">
       <div class="w3-container w3-content w3-padding-64 w3-black" style="max-width:800px">
         <h2 class="w3-wide w3-center lang" key="agenda"></h2>
         <h4 class="w3-opacity w3-center lang" key="emanaldiak"></h4>
@@ -244,7 +244,7 @@
 </div>
 
 <!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-xxxlarge"> <!-- lehen: w3-light-grey -->
+<footer class="w3-container w3-padding-64 w3-center w3-xxxlarge w3-light-grey">
 
   <a href="https://www.facebook.com/OiassoKamerata/" target="_blank" id="fbLink">
     <i class="fa fa-facebook"></i>

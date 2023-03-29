@@ -116,6 +116,9 @@ function bilatuEmanaldia() {
                         $('#em_data').html(emanaldia['data_' + currentLang] + ', ' + emanaldia['herria'])
                         $('#em_izena').html(emanaldia['izena_' + currentLang])
                         $('#hurrengoaFloat').show()
+						$('#agenda').show()
+						$('#agendaTopbar').show()
+						$('#agendaNavbar').show()
                         $('footer')[0].style.setProperty('padding-bottom', '120px', 'important');
                         hurrengoaJarrita = true
                     }

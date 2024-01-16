@@ -3,7 +3,7 @@ $(document).ready(function() {
     
     // Automatic Slideshow - change image every 5 seconds
     var myIndex = 1;
-    setTimeout(carousel, 5000); 
+    setTimeout(carousel, 7000); 
 
     function carousel() {
       var i;
@@ -15,7 +15,7 @@ $(document).ready(function() {
       if (myIndex > x.length) {myIndex = 1}   
       $(x[myIndex-1]).show();
       $(x[myIndex-1]).animate({opacity: 1}, 800)
-      setTimeout(carousel, 5000);    
+      setTimeout(carousel, 7000);    
     }
     
 
@@ -34,6 +34,31 @@ $(document).ready(function() {
         prog_hidden_row.show()
         gehi_div.hide()
     })
+
+    const topBar = document.getElementById('topBar')
+    const contentBorder = document.getElementById('content-border')
+
+    const observerOptions = {
+        rootMargin: '-84px 0px 1000px 0px'
+    }
+
+    const observer = new IntersectionObserver(
+        function(entries) {
+            entries.forEach(entry => {
+              //console.log(entry)
+              if (entry.isIntersecting) {
+                topBar.classList.remove('w3-white', 'w3-card')
+                topBar.classList.add('transparentBar')
+              } else {
+                topBar.classList.remove('transparentBar')
+                topBar.classList.add('w3-white', 'w3-card')
+              }
+            })
+        },
+        observerOptions
+    )
+
+    observer.observe(contentBorder)
     
     var currentLang
     ezarriHizkuntza('eu')

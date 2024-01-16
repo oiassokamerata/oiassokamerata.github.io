@@ -21,20 +21,19 @@
 -->
 </head>
 <body>
-<div id="fb-root"></div>
 
 <!-- Navbar -->
 <div class="w3-top">
-  <div id="topBar" class="w3-bar w3-white w3-card" style="height:84px;">
-    <a id="navButton" class="w3-bar-item w3-button w3-padding-large hide-topbar-large w3-right header-text" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large"><img src="./img/logo.png" style="height:60px">
-    <a href="#gu" class="w3-bar-item w3-button header-text hide-topbar-small lang" key="gu">
-    <a href="#musika" class="w3-bar-item w3-button header-text hide-topbar-small lang" key="musika">
-    <a href="#kontaktua" class="w3-bar-item w3-button header-text hide-topbar-small lang" key="kontaktua">
-	<a href="#agenda" id="agendaTopbar" class="w3-bar-item w3-button header-text hide-topbar-small lang" key="agenda">
-	<a class="w3-bar-item w3-button header-text w3-right hide-topbar-small langButton" onclick="ezarriHizkuntza('es')" key="es"><b>Castellano</b></a>
-    <a class="w3-bar-item w3-button header-text w3-right hide-topbar-small langButton" onclick="ezarriHizkuntza('eu')" key="eu"><b>Euskara</b></a>
-	<div class="vl w3-right hide-topbar-small"></div>
+  <div id="topBar" class="w3-bar" style="height:84px"> <!-- </div> class="w3-bar w3-white w3-card" style="height:84px;"> -->
+    <a id="navButton" class="w3-bar-item barLink w3-padding-large hide-topbar-large w3-right header-text" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item barLink w3-padding-large"><img src="./img/logo.png" style="height:60px">
+    <a href="#gu" class="w3-bar-item barLink header-text hide-topbar-small lang" key="gu">
+    <a href="#musika" class="w3-bar-item barLink header-text hide-topbar-small lang" key="musika">
+    <a href="#kontaktua" class="w3-bar-item barLink header-text hide-topbar-small lang" key="kontaktua">
+	  <a href="#agenda" id="agendaTopbar" class="w3-bar-item barLink header-text hide-topbar-small lang" key="agenda">
+	  <a class="w3-bar-item barLink header-text w3-right hide-topbar-small langButton" onclick="ezarriHizkuntza('es')" key="es"><b>Castellano</b></a>
+    <a class="w3-bar-item barLink header-text w3-right hide-topbar-small langButton" onclick="ezarriHizkuntza('eu')" key="eu"><b>Euskara</b></a>
+	  <div class="vl w3-right hide-topbar-small"></div>
   </div>
 </div>
 
@@ -49,27 +48,47 @@
   <a class="w3-bar-item w3-button w3-padding-large langButton" onclick="ezarriHizkuntza('es')" key="es"><b>Castellano</b></a>
 </div>
 
-<!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:84px">
-  <!--
-  <img class="w3-black" src="./img/logo_txuria.svg" style="position: absolute; height: 600px; margin-left: -150px;">
-  -->
+<!--
+<img class="w3-black" src="./img/logo_txuria.svg" style="position: absolute; height: 600px; margin-left: -150px;">
+-->
 
-  <!-- Automatic Slideshow Images -->
-  <div class="w3-center w3-black" id="fondoBeltza">
-      <div class="mySlides" style="opacity: 1; display:block">
-        <img src="./img/irun1.jpg" title="Oiasso Kamerata en el Amaia KZ de Irun">
-      </div>
-      <div class="mySlides">  
-        <img src="./img/bergara.jpeg" title="Tomás Ruti, Maider Aizpurua, Ane Aguirre e Iratxe Paredes en Bergara">
-      </div>
-      <div class="mySlides">  
-        <img src="./img/irun2.jpg" title="Oiasso Kamerata en el Amaia KZ de Irun">
-      </div>
-      <div class="mySlides">
-        <img src="./img/azpeitia.jpg" title="Tomás Ruti, Iñaki Gezala, Maider Aizpurua, Josean Gómez e Iratxe Paredes en Azpeitia">
-      </div>
+<!-- Automatic Slideshow Images -->
+<div class="w3-center w3-black" id="fondoBeltza">
+  <div class="mySlides" style="opacity: 1; display:block">
+    <img src="./img/andoain2-800.webp" title="Oiasso Kamerata en el Amaia KZ de Irun">
   </div>
+  <div class="mySlides">
+    <img src="./img/andoain3-800.webp" title="Oiasso Kamerata en el Amaia KZ de Irun">
+  </div>
+  <div class="mySlides">
+    <img src="./img/andoain15.webp" title="Oiasso Kamerata en el Amaia KZ de Irun">
+  </div>
+  <div class="mySlides">
+    <img src="./img/andoain17.webp" title="Oiasso Kamerata en el Amaia KZ de Irun">
+  </div>
+  <div class="mySlides">
+    <img src="./img/andoain18.webp" title="Oiasso Kamerata en el Amaia KZ de Irun">
+  </div>
+  <div class="mySlides">
+    <img src="./img/andoain1.webp" title="Oiasso Kamerata en el Amaia KZ de Irun">
+  </div>
+  <!--
+    <div class="mySlides" style="opacity: 1; display:block">  
+      <img src="./img/bergara.jpeg" title="Tomás Ruti, Maider Aizpurua, Ane Aguirre e Iratxe Paredes en Bergara">
+    </div>    
+    <div class="mySlides">  
+      <img src="./img/irun2.jpg" title="Oiasso Kamerata en el Amaia KZ de Irun">
+    </div>
+    <div class="mySlides">
+      <img src="./img/azpeitia.jpg" title="Tomás Ruti, Iñaki Gezala, Maider Aizpurua, Josean Gómez e Iratxe Paredes en Azpeitia">
+    </div>
+  -->
+  <div class="imgCircle"></div>
+</div>
+
+  <!-- Page content -->
+<div id="content-border" style="height: 0px; width: 100%;"></div>
+<div id="all-content" class="w3-content">
 
   <!-- Gu atala -->
   <a class="anchor" id="gu"></a>

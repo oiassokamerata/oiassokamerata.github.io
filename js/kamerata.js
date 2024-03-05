@@ -3,7 +3,7 @@ $(document).ready(function() {
     
     // Automatic Slideshow - change image every 5 seconds
     var myIndex = 1;
-    setTimeout(carousel, 7000); 
+    setTimeout(carousel, 4000); 
 
     function carousel() {
       var i;
@@ -15,7 +15,7 @@ $(document).ready(function() {
       if (myIndex > x.length) {myIndex = 1}   
       $(x[myIndex-1]).show();
       $(x[myIndex-1]).animate({opacity: 1}, 800)
-      setTimeout(carousel, 7000);    
+      setTimeout(carousel, 4000);    
     }
     
 

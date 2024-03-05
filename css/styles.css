@@ -135,7 +135,7 @@ html {
 }
 
 #all-content {
-    max-width:2000px;
+    max-width: none;
     margin-top: 600px;
     background: white;
     box-shadow: black 0px -15px 15px -15px;
@@ -159,6 +159,7 @@ html {
     }
   }
 
+/*
 @media (max-width:600px) and (min-height:150vw){
     .mySlides img {
         height: calc(100vw - var(--scrollbar-width));
@@ -167,6 +168,19 @@ html {
         animation-duration: 7.8s;
         animation-timing-function: linear;
         animation-fill-mode: forwards;
+    }
+    #fondoBeltza {
+        height: calc(100vw - var(--scrollbar-width) / 2);
+    }
+    #all-content {
+        margin-top: calc(100vw - var(--scrollbar-width));
+    }
+}
+*/
+@media (max-width:600px) and (min-height:150vw){
+    .mySlides img {
+        height: calc(100vw - var(--scrollbar-width));
+        object-fit: cover;
     }
     #fondoBeltza {
         height: calc(100vw - var(--scrollbar-width) / 2);

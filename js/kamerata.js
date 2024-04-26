@@ -162,15 +162,15 @@ function bilatuEmanaldia() {
                             '<p class="tituloProg"' + atributuak + '><b>' + emanaldia['izena_' + currentLang] + '</b>' + ikonoa + '</p>' +
                             '<div class="emanaldi-info">' +
                                 '<div>' +
-                                    '<i class="fa fa-calendar" style="padding-right:10px;"></i>' + 
+                                    '<i class="fa fa-calendar fa-fw" style="padding-right:10px;"></i>' + 
                                     emanaldia['data_' + currentLang] + ', ' + emanaldia['asteko_eguna_' + currentLang] +
                                 '</div>' +
                                 '<div>' +
-                                    '<i class="fa fa-clock-o" style="padding-right:10px;"></i>' +
+                                    '<i class="fa fa-clock-o fa-fw" style="padding-right:10px;"></i>' +
                                     orduaNormal +
                                 '</div>' +
                                 '<div>' +
-                                    '<i class="fa fa-map-marker" style="padding-right:10px;"></i>' +
+                                    '<i class="fa fa-map-marker fa-fw" style="padding-right:10px;"></i>' +
                                     emanaldia['aretoa'] + ', ' + emanaldia['herria'] +
                                 '</div>' +
                             '</div>' +

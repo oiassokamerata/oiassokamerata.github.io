@@ -419,10 +419,6 @@ footer {
     z-index: 2;
 }
 
-#agendaDiv, #agendaTopbar, #agendaNavmenu {
-	display: none;
-}
-
 .hurrengoa-flex {
     justify-content: center;
     align-items: center;

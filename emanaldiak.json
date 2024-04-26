@@ -83,5 +83,42 @@
         "esteka_eu": "https://www.fundacionvital.eus/eu/astearte-musikalak-oiasso-kamerata-20230328",
         "esteka_es": "https://www.fundacionvital.eus/martes-musicales-oiasso-kamerata-28032023",
         "esteka_mota": "sarrerak"
+    },
+    {
+        "izena_eu": "Oiasso Kamerata eta Irene Sagarzazu",
+        "izena_es": "Oiasso Kamerata e Irene Sagarzazu",
+        "data_array": [2024, 3, 27, 19, 0],
+        "data_eu": "Apirilak 27",
+        "asteko_eguna_eu": "larunbata",
+        "data_es": "27 de abril",
+        "asteko_eguna_es": "sábado",
+        "herria": "Lezo",
+        "aretoa": "Gezala audotoriuma"
+    },
+    {
+        "izena_eu": "Oiasso Kamerata + Aitzol Iturriagagoitia eta David&nbsp;Apellániz",
+        "izena_es": "Oiasso Kamerata + Aitzol Iturriagagoitia y David&nbsp;Apellániz",
+        "data_array": [2024, 4, 5, 19, 0],
+        "data_eu": "Maiatzak 5",
+        "asteko_eguna_eu": "igandea",
+        "data_es": "5 de mayo",
+        "asteko_eguna_es": "domingo",
+        "herria": "Irun",
+        "aretoa": "Amaia KZ",
+        "esteka_eu": "https://www.irun.org/eu/agenda/ekintzak/12485-ricardo-requejo-zikloa-oiasso-kamerata-aitzol-i-biolina-eta-david-a",
+        "esteka_es": "https://www.irun.org/es/agenda/eventos/12484-ciclo-ricardo-requejo-oiasso-kamerata-aitzol-i-violin-y-david-a-violoncello",
+        "esteka_mota": "sarrerak"
+    },
+    {
+        "izena_eu": "Barroko ala ez barroko?",
+        "izena_es": "Barroko ala ez barroko?",
+        "programa": "barroko",
+        "data_array": [2024, 4, 24, 19, 0],
+        "data_eu": "Maiatzak 24",
+        "asteko_eguna_eu": "ostirala",
+        "data_es": "24 de mayo",
+        "asteko_eguna_es": "viernes",
+        "herria": "Lasarte",
+        "aretoa": "Las Brigidas komentua"
     }
 ]

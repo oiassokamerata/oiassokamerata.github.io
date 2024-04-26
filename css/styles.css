@@ -98,6 +98,8 @@ html {
 }
 
 .animate-top-gentle{animation:animatetop 0.4s}@keyframes animatetop{from{top:-10px;opacity:0} to{top:0;opacity:1}}
+/*.animate-top-gentle{animation:animatetop 0.4s}@keyframes animatetop{from{top:50px;opacity:0} to{top:0;opacity:1}}*/
+/* TODO: Ezarri bat nabigazio menurako eta beste bat modaletarako*/
 
 .mySlides {
     position: absolute;
@@ -305,6 +307,8 @@ td p {
 
 .w3-modal {
     padding-top: 50px;
+    backdrop-filter: blur(5px);
+    overflow: hidden;
 }
 
 .w3-modal-content {

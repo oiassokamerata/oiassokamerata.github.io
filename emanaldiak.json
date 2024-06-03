@@ -120,5 +120,31 @@
         "asteko_eguna_es": "viernes",
         "herria": "Lasarte",
         "aretoa": "Las Brigidas komentua"
+    },
+    {
+        "izena_eu": "Guda eta Bakea",
+        "izena_es": "Guerra y Paz",
+        "programa": "gerra",
+        "data_array": [2024, 6, 20, 22, 0],
+        "data_eu": "Uztailak 20",
+        "asteko_eguna_eu": "larunbata",
+        "data_es": "20 de julio",
+        "asteko_eguna_es": "sábado",
+        "herria": "Lekeitio",
+        "aretoa": "Santa Maria basilika"
+    },
+    {
+        "izena_eu": "La Quincena en Arantzazu: Abraham&nbsp;Cupeiro",
+        "izena_es": "La Quincena en Arantzazu: Abraham&nbsp;Cupeiro",
+        "data_array": [2024, 7, 29, 19, 0],
+        "data_eu": "Abuztuak 29",
+        "asteko_eguna_eu": "osteguna",
+        "data_es": "29 de agosto",
+        "asteko_eguna_es": "jueves",
+        "herria": "Oñati",
+        "aretoa": "Arantzazuko santutegia",
+        "esteka_eu": "https://tickets.quincenamusical.eus/selection/event/date?productId=10229198403574&lang=eu",
+        "esteka_es": "https://tickets.quincenamusical.eus/selection/event/date?productId=10229198403574&lang=es",
+        "esteka_mota": "sarrerak"
     }
 ]

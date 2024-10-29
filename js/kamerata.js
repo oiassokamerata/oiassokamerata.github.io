@@ -29,9 +29,9 @@ $(document).ready(function() {
     
     var gehi_button = $('#programa_gehi')
     var gehi_div = $('#programa_gehi_div')
-    var prog_hidden_row = $('#prog_hidden_row')
+    var prog_hidden = $('#prog_hidden')
     gehi_button.click(function() {
-        prog_hidden_row.show()
+        prog_hidden.show()
         gehi_div.hide()
     })
 
@@ -140,11 +140,14 @@ function bilatuEmanaldia() {
                     if (!hurrengoaJarrita) {
                         $('#em_data').html(emanaldia['data_' + currentLang] + ', ' + emanaldia['herria'])
                         $('#em_izena').html(emanaldia['izena_' + currentLang])
+                        // Hurrengoa zatia iruzkindu dut momentuz hurrengoaFloat inoiz ez erakusteko
+                        /*
                         $('#hurrengoaFloat').show()
+                        $('footer')[0].style.setProperty('padding-bottom', '120px', 'important');
+                        */
 						$('#agenda').show()
 						$('#agendaTopbar').show()
 						$('#agendaNavbar').show()
-                        $('footer')[0].style.setProperty('padding-bottom', '120px', 'important');
                         hurrengoaJarrita = true
                     }
                     if (zerrendaDiv.children().length > 0) {

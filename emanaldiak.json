@@ -149,5 +149,16 @@
         "esteka_eu": "https://tickets.quincenamusical.eus/selection/event/date?productId=10229198403574&lang=eu",
         "esteka_es": "https://tickets.quincenamusical.eus/selection/event/date?productId=10229198403574&lang=es",
         "esteka_mota": "sarrerak"
+    },
+    {
+        "izena_eu": "Musikaste",
+        "izena_es": "Musikaste",
+        "data_array": [2025, 4, 16, 19, 0],
+        "data_eu": "Maiatzak 16",
+        "asteko_eguna_eu": "ostirala",
+        "data_es": "16 de mayo",
+        "asteko_eguna_es": "viernes",
+        "herria": "Errenteria",
+        "aretoa": "Lekuona Fabrika"
     }
 ]

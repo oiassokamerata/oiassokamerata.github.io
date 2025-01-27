@@ -151,6 +151,20 @@
         "esteka_mota": "sarrerak"
     },
     {
+        "izena_eu": "Emakume konpositoreak",
+        "izena_es": "Mujeres compositoras",
+        "data_array": [2025, 1, 16, 19, 0],
+        "data_eu": "Otsailak 16",
+        "asteko_eguna_eu": "igandea",
+        "data_es": "16 de febrero",
+        "asteko_eguna_es": "domingo",
+        "herria": "Irun",
+        "aretoa": "Amaia KZ",
+        "esteka_eu": "https://www.irun.org/eu/agenda/ekintzak/14957-ricardo-requejo-zikloa-emakume-konpositoreak",
+        "esteka_es": "https://www.irun.org/es/agenda/eventos/14956-ciclo-ricardo-requejo-compositoras",
+        "esteka_mota": "sarrerak"
+    },
+    {
         "izena_eu": "Musikaste",
         "izena_es": "Musikaste",
         "data_array": [2025, 4, 16, 19, 0],

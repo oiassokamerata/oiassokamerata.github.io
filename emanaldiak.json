@@ -165,8 +165,19 @@
         "esteka_mota": "sarrerak"
     },
     {
-        "izena_eu": "Musikaste",
-        "izena_es": "Musikaste",
+        "izena_eu": "Emotio Taldea & Oiasso Kamerata: Magnificat",
+        "izena_es": "Emotio Taldea & Oiasso Kamerata: Magnificat",
+        "data_array": [2025, 2, 29, 20, 30],
+        "data_eu": "Martxoak 29",
+        "asteko_eguna_eu": "larunbata",
+        "data_es": "29 de marzo",
+        "asteko_eguna_es": "sábado",
+        "herria": "Hondarribia",
+        "aretoa": "Portuko Eliza / Iglesia de la Marina"
+    },
+    {
+        "izena_eu": "Bizitzaren harian (Musikaste)",
+        "izena_es": "Bizitzaren harian (Musikaste)",
         "data_array": [2025, 4, 16, 19, 0],
         "data_eu": "Maiatzak 16",
         "asteko_eguna_eu": "ostirala",

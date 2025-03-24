@@ -99,7 +99,8 @@ html {
 
 .animate-top-gentle{animation:animatetop 0.4s}@keyframes animatetop{from{top:-10px;opacity:0} to{top:0;opacity:1}}
 /*.animate-top-gentle{animation:animatetop 0.4s}@keyframes animatetop{from{top:50px;opacity:0} to{top:0;opacity:1}}*/
-/* TODO: Ezarri bat nabigazio menurako eta beste bat modaletarako*/
+
+.animate-bottom-gentle{animation:animatebottom 0.4s}@keyframes animatebottom{from{bottom:-10px;opacity:0} to{bottom:0;opacity:1}}
 
 .mySlides {
     position: absolute;

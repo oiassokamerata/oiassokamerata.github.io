@@ -132,10 +132,32 @@
       <h2 class="w3-wide w3-center lang" key="musika"></h2>
       <h4 class="w3-opacity w3-center lang" key="programak"></h4>
 
-      <div class="row-programak w3-padding-top-32">
+      <div id="grid-programak" class="w3-padding-top-32">
 
-        <div class="w3-third w3-margin-bottom big-hover w3-hover-shadow" style="background: white" onclick="erakutsiModala('brahms')">
-          <img src="./img/brahms.webp" style="width:100%">
+        <div class="big-hover w3-hover-shadow" style="background: white" onclick="erakutsiModala('bizitza')">
+          <img loading="lazy" src="./img/bizitza.webp" style="width:100%">
+          <div class="w3-container" style="color: black">
+            <p class="tituloProg"><b>Bizitzaren harian</b></p>
+            <p class="w3-opacity">2025</p>
+            <p>Guridi - Larrea - Escudero - Bernaola - Lambert - Baffalio - ...</p>
+          </div>
+          <div style="height:70.5px"></div> <!-- txapuzatxoa botoiei tokia egiteko -->
+          <button class="w3-button w3-black ikusi-botoia"><i class="fa fa-chevron-right"></i></button>
+		    </div>
+
+        <div class="big-hover w3-hover-shadow" style="background: white" onclick="erakutsiModala('compositoras')">
+          <img loading="lazy" src="./img/compositoras.webp" style="width:100%">
+          <div class="w3-container" style="color: black">
+            <p class="tituloProg"><b class="lang" key="compositoras"></b></p>
+            <p class="w3-opacity">2025</p>
+            <p>De la Guerre - Martines - Le&nbsp;Beau - Williams</p>
+          </div>
+          <div style="height:70.5px"></div> <!-- txapuzatxoa botoiei tokia egiteko -->
+          <button class="w3-button w3-black ikusi-botoia"><i class="fa fa-chevron-right"></i></button>
+		    </div>
+
+        <div class="big-hover w3-hover-shadow" style="background: white" onclick="erakutsiModala('brahms')">
+          <img loading="lazy" src="./img/brahms.webp" style="width:100%">
           <div class="w3-container" style="color: black">
             <p class="tituloProg"><b>Brahms - Schubert</b></p>
             <p class="w3-opacity">2024</p>
@@ -145,8 +167,8 @@
           <button class="w3-button w3-black ikusi-botoia"><i class="fa fa-chevron-right"></i></button>
 		    </div>
 
-        <div class="w3-third w3-margin-bottom big-hover w3-hover-shadow" style="background: white" onclick="erakutsiModala('iñaki')">
-          <img src="./img/iñaki.webp" style="width:100%">
+        <div class="big-hover w3-hover-shadow" style="background: white" onclick="erakutsiModala('iñaki')">
+          <img loading="lazy" src="./img/iñaki.webp" style="width:100%">
           <div class="w3-container" style="color: black">
             <p class="tituloProg"><b>Iñaki Gezala & <span style="white-space:nowrap">Oiasso Kamerata</span></b></p>
             <p class="w3-opacity">2023-<span class="lang" key="orain"></p>
@@ -156,8 +178,8 @@
           <button class="w3-button w3-black ikusi-botoia"><i class="fa fa-chevron-right"></i></button>
 		    </div>
       
-        <div class="w3-third w3-margin-bottom big-hover w3-hover-shadow" style="background: white" onclick="erakutsiModala('gerra')">
-          <img src="./img/gerra.jpg" style="width:100%">
+        <div class="big-hover w3-hover-shadow" style="background: white" onclick="erakutsiModala('gerra')">
+          <img loading="lazy" src="./img/gerra.jpg" style="width:100%">
           <div class="w3-container" style="color: black">
             <p class="tituloProg"><b class="lang" key="gerra"></b></p>
             <p class="w3-opacity">2022-2024</p>
@@ -167,12 +189,8 @@
           <button class="w3-button w3-black ikusi-botoia"><i class="fa fa-chevron-right"></i></button>
 		    </div>
 
-      </div>
-
-      <div class="row-programak">
-        
-        <div class="w3-third w3-margin-bottom big-hover w3-hover-shadow" style="background: white" onclick="erakutsiModala('barroko')">
-          <img src="./img/barroko.jpg" style="width:100%">
+        <div class="big-hover w3-hover-shadow" style="background: white" onclick="erakutsiModala('barroko')">
+          <img loading="lazy" src="./img/barroko.jpg" style="width:100%">
           <div class="w3-container" style="color: black">
             <p class="tituloProg"><b class="lang" key="barroko"></b></p>
             <p class="w3-opacity">2022-2024</span></p>
@@ -182,8 +200,8 @@
           <button class="w3-button w3-black ikusi-botoia"><i class="fa fa-chevron-right"></i></button>
 		    </div>
 
-        <div class="w3-third w3-margin-bottom big-hover hover-shadow-up" style="background: white" onclick="erakutsiModala('larrea')">
-          <img src="./img/larrea.jpg" style="width:100%">
+        <div class="big-hover hover-shadow-up" style="background: white" onclick="erakutsiModala('larrea')">
+          <img loading="lazy" src="./img/larrea.jpg" style="width:100%">
           <div class="w3-container" style="color: black">
             <p class="tituloProg"><b>Valentín Larrea Yturbe</b></p>
             <p class="w3-opacity">2020-2022</p>
@@ -193,8 +211,8 @@
           <button class="w3-button w3-black ikusi-botoia"><i class="fa fa-chevron-right"></i></button>
         </div>
       
-        <div class="w3-third w3-margin-bottom big-hover w3-hover-shadow" style="background: white" onclick="erakutsiModala('tango')">
-          <img src="./img/tango.webp" style="width:100%">
+        <div class="big-hover w3-hover-shadow" style="background: white" onclick="erakutsiModala('tango')">
+          <img loading="lazy" src="./img/tango.webp" style="width:100%">
           <div class="w3-container" style="color: black">
             <p class="tituloProg"><b>Con aire de tango</b></p>
             <p class="w3-opacity">2020-2021</p>
@@ -203,79 +221,60 @@
           <div style="height:70.5px"></div> <!-- txapuzatxoa botoiei tokia egiteko -->
           <button class="w3-button w3-black ikusi-botoia"><i class="fa fa-chevron-right"></i></button>
 		    </div>
-        
-        <!-- Hutsa hurrengo bat iragartzeko: -->
-        <div class="w3-third w3-margin-bottom" style="background: white; text-align:center; display:none;">
-          <div class="w3-container w3-white">
-            <p class="w3-opacity lang" key="laster" style="margin: 5em 0">
+
+        <div class="big-hover w3-hover-shadow" style="background: white" onclick="erakutsiModala('mikel')">
+          <img loading="lazy" src="./img/mikel.jpg" style="width:100%">
+          <div class="w3-container" style="color: black">
+            <p class="tituloProg"><b>Oiasso Kamerata <span style="white-space:nowrap">& Mikel Zunzundegui</span></b></p>
+            <p class="w3-opacity">2021</p>
+            <p>Purcell - Boccherini - Bloch - Finzi - Nielssen</p>
           </div>
-		    </div>
+          <div style="height:70.5px"></div> <!-- txapuzatxoa botoiei tokia egiteko -->
+          <button class="w3-button w3-black ikusi-botoia"><i class="fa fa-chevron-right"></i></button>
+        </div>
+
+        <div class="big-hover hover-shadow-up" style="background: white" onclick="erakutsiModala('god')">
+          <img src="./img/god.jpg" style="width:100%">
+          <div class="w3-container" style="color: black">
+            <p class="tituloProg"><b>God save the strings!</b></p>
+            <p class="w3-opacity">2019-2020</p>
+            <p>Purcell - Elgar - Walton - Holst</p>
+          </div>
+          <div style="height:70.5px"></div> <!-- txapuzatxoa botoiei tokia egiteko -->
+          <button class="w3-button w3-black ikusi-botoia"><i class="fa fa-chevron-right"></i></button>
+        </div>
+
+        <div class="big-hover hover-shadow-up" style="background: white" onclick="erakutsiModala('julen')">
+          <img loading="lazy" src="./img/julen.jpg" style="width:100%;">
+          <div class="w3-container" style="color: black">
+            <p class="tituloProg"><b class="lang" key="lau_urtaroak"></b></p>
+            <p class="w3-opacity">2019</p>
+            <p class="lang" key="urtaroak_desk"></p>
+          </div>
+          <div style="height:70.5px"></div> <!-- txapuzatxoa botoiei tokia egiteko -->
+          <button class="w3-button w3-black ikusi-botoia"><i class="fa fa-chevron-right"></i></button>
+        </div>
+
+        <div class="big-hover hover-shadow-up" style="background: white" onclick="erakutsiModala('viaggio')">
+          <img loading="lazy" src="./img/viaggio.jpg" style="width:100%;">
+          <div class="w3-container" style="color: black">
+            <p class="tituloProg"><b>Viaggio musicale</b></p>
+            <p class="w3-opacity">2016-2018</p>
+            <p>Corelli - Vivaldi - Puccini - Respighi - Rota</p>
+          </div>
+          <div style="height:70.5px"></div> <!-- txapuzatxoa botoiei tokia egiteko -->
+          <button class="w3-button w3-black ikusi-botoia"><i class="fa fa-chevron-right"></i></button>
+        </div>
+
       </div>
       
-      <div id="prog_hidden" style="display: none;">
-
-        <div class="row-programak">
-
-          <div class="w3-third w3-margin-bottom big-hover w3-hover-shadow" style="background: white" onclick="erakutsiModala('mikel')">
-            <img loading="lazy" src="./img/mikel.jpg" style="width:100%">
-            <div class="w3-container" style="color: black">
-              <p class="tituloProg"><b>Oiasso Kamerata <span style="white-space:nowrap">& Mikel Zunzundegui</span></b></p>
-              <p class="w3-opacity">2021</p>
-              <p>Purcell - Boccherini - Bloch - Finzi - Nielssen</p>
-            </div>
-            <div style="height:70.5px"></div> <!-- txapuzatxoa botoiei tokia egiteko -->
-            <button class="w3-button w3-black ikusi-botoia"><i class="fa fa-chevron-right"></i></button>
-          </div>
-
-          <div class="w3-third w3-margin-bottom big-hover hover-shadow-up" style="background: white" onclick="erakutsiModala('god')">
-            <img src="./img/god.jpg" style="width:100%">
-            <div class="w3-container" style="color: black">
-              <p class="tituloProg"><b>God save the strings!</b></p>
-              <p class="w3-opacity">2019-2020</p>
-              <p>Purcell - Elgar - Walton - Holst</p>
-            </div>
-            <div style="height:70.5px"></div> <!-- txapuzatxoa botoiei tokia egiteko -->
-            <button class="w3-button w3-black ikusi-botoia"><i class="fa fa-chevron-right"></i></button>
-          </div>
-
-          <div class="w3-third w3-margin-bottom big-hover hover-shadow-up" style="background: white" onclick="erakutsiModala('julen')">
-            <img loading="lazy" src="./img/julen.jpg" style="width:100%;">
-            <div class="w3-container" style="color: black">
-              <p class="tituloProg"><b class="lang" key="lau_urtaroak"></b></p>
-              <p class="w3-opacity">2019</p>
-              <p class="lang" key="urtaroak_desk"></p>
-            </div>
-            <div style="height:70.5px"></div> <!-- txapuzatxoa botoiei tokia egiteko -->
-            <button class="w3-button w3-black ikusi-botoia"><i class="fa fa-chevron-right"></i></button>
-          </div>
-
-        </div>
-
-        <div class="row-programak">
-
-          <div class="w3-third w3-margin-bottom big-hover hover-shadow-up" style="background: white" onclick="erakutsiModala('viaggio')">
-            <img loading="lazy" src="./img/viaggio.jpg" style="width:100%;">
-            <div class="w3-container" style="color: black">
-              <p class="tituloProg"><b>Viaggio musicale</b></p>
-              <p class="w3-opacity">2016-2018</p>
-              <p>Corelli - Vivaldi - Puccini - Respighi - Rota</p>
-            </div>
-            <div style="height:70.5px"></div> <!-- txapuzatxoa botoiei tokia egiteko -->
-            <button class="w3-button w3-black ikusi-botoia"><i class="fa fa-chevron-right"></i></button>
-          </div>
-          <!--
-          <div class="w3-third">
-            <div class="w3-container" style="color: black"></div>
-          </div>
-          -->
-
-        </div>
-      </div>
       <div id="programa_gehi_div" class="w3-center" style="margin-top: 32px">
         <a id="programa_gehi" target="_blank" class="w3-button w3-white w3-padding w3-round-xxlarge"><i class="fa fa-chevron-down"></i>&emsp;<span class="lang" key="erakutsi_gehiago"></a>
       </div>
+      
     </div>
   </div>
+
 
   <!-- Programen modala -->
   <div id="programaModal" class="w3-modal" style="display:none">

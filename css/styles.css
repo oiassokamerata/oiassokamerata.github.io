@@ -250,32 +250,27 @@ html {
     box-shadow:0 -4px 10px 0 rgba(0,0,0,0.2),0 -4px 20px 0 rgba(0,0,0,0.19)
 }
 
-.w3-third {
-    position: relative;
-    max-width: min(400px, 90%); /* HAU ALDATU TXARTELAK MOBILETAN FINAGOAK EGITEKO. LEHEN 400px*/
-    float: none;
-    /*width: calc(33.33% - 16px)*/
-}
 
-@media (min-width:651px){
-    .row-programak {
-        display: flex; 
-        align-items: stretch; 
-        gap: 16px;
-    }
-    /* HEMENDIK KENDU DUT, MOBILETAN ERE EFEKTUA EGITEKO
-    .big-hover:hover {
-        transform: scale(1.07);
-        z-index: 1;
-    }
-    */
+#grid-programak {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: auto;
 }
 
 @media (max-width:650px) {
-    .w3-third {
-        margin: auto;
-        width: 100%;
+    #grid-programak {
+        grid-template-columns: 1fr;
+        max-width: min(400px, 90%);
     }
+}
+
+#grid-programak > div {
+    position: relative;
+}
+
+#grid-programak > div:nth-child(n+7) {
+    display: none;
 }
 
 td {
@@ -287,6 +282,17 @@ td p {
     margin: 0px;
     padding-left: 2em;
     text-indent: -2em;
+}
+
+table {
+    margin: 16px auto;
+}
+
+.obra-info {
+    column-span: all;
+    text-align: center;
+    padding-bottom: 16px;
+    padding-top: 0;
 }
 
 .YTmug p {
@@ -327,6 +333,16 @@ td p {
     display: inline;
     margin-left: 8px;
     border-color: black!important;
+}
+
+.dossier-button {
+    font-style: italic;
+    display:inline-block;
+    background-color: black;
+    color: white;
+    & span {
+        margin-left: 8px;
+    }
 }
 
 .agenda-button {

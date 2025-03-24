@@ -29,9 +29,9 @@ $(document).ready(function() {
     
     var gehi_button = $('#programa_gehi')
     var gehi_div = $('#programa_gehi_div')
-    var prog_hidden = $('#prog_hidden')
+    var gridProgramak = $('#grid-programak > div')
     gehi_button.click(function() {
-        prog_hidden.show()
+        gridProgramak.show()
         gehi_div.hide()
     })
 

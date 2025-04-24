@@ -185,6 +185,9 @@
         "data_es": "16 de mayo",
         "asteko_eguna_es": "viernes",
         "herria": "Errenteria",
-        "aretoa": "Lekuona Fabrika"
+        "aretoa": "Lekuona Fabrika",
+        "esteka_eu": "https://sarrerak.errenteria.eus/MusikasteGanberakoMusika?idioma=EU",
+        "esteka_es": "https://sarrerak.errenteria.eus/MusikasteGanberakoMusika?idioma=ES",
+        "esteka_mota": "sarrerak"
     }
 ]

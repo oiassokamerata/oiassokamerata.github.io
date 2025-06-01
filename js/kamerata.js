@@ -58,11 +58,9 @@ $(document).ready(function() {
         observerOptions
     )
 
-    observer.observe(contentBorder)
-    
-    var currentLang
-    ezarriHizkuntza('eu')
-    
+    observer.observe(contentBorder)  
+
+    setLang('eu')
 })
 
 // Used to toggle the menu on small screens when clicking on the menu button
@@ -103,19 +101,43 @@ function ezarriHizkuntza(lang) {
 
 }
 
-function ezarriHizkuntzaElem(elem, lang) {
-    $.getJSON('./languages/'+lang+'.json', function(data) {
-        elem.find(".lang").each(function() {
-            $(this).html(data[$(this).attr("key")]);
-        })
+function setLang(lang) {
+
+    currentLang = lang
+
+    bilatuEmanaldiak()
+
+    let elements = document.querySelectorAll(".lang")
+    elements.forEach(element => {
+        let key = element.getAttribute("key")
+        element.innerHTML = strings[lang][key]
+    })
+
+    document.querySelectorAll(".langButton").forEach(function(button) {
+        if (button.getAttribute('key') == lang) {
+            button.style.display = 'none'
+        } else {
+            button.style.display = ''
+        }
     })
 }
-function erakutsiModala(izena) {
-    var elem = $('#programaModal')
-    elem.load('./'+izena+'.html', function() {
-        ezarriHizkuntzaElem(elem, currentLang)
+
+function setLangElem(elem, lang) {
+    elem.querySelectorAll(".lang").forEach(subElem => {
+        let key = subElem.getAttribute("key")
+        subElem.innerHTML = strings[lang][key]
     })
-    elem.show()
+}
+
+function erakutsiModala(izena) {
+    let elem = document.getElementById('programaModal')
+    fetch('./' + izena + '.html')
+        .then(response => response.text())
+        .then(html => {
+            elem.innerHTML = html
+            setLangElem(elem, currentLang)
+            elem.style.display = 'block'
+        })
 }
 
 function kenduElem(elem) {
@@ -123,9 +145,8 @@ function kenduElem(elem) {
     elem.replaceChildren();
 }
 
-function bilatuEmanaldia() {
+function bilatuEmanaldiak() {
     let dataOrain = new Date()
-    var hurrengoaJarrita = false
     var zerrendaDiv = $('#emanaldi-lista')
     zerrendaDiv.empty()
     //$.getJSON('./emanaldiak.json', function(emanaldiak) {
@@ -137,19 +158,8 @@ function bilatuEmanaldia() {
             for (let emanaldia of emanaldiak) {
                 let data = new Date(...emanaldia['data_array'])
                 if (data > dataOrain) {
-                    if (!hurrengoaJarrita) {
-                        $('#em_data').html(emanaldia['data_' + currentLang] + ', ' + emanaldia['herria'])
-                        $('#em_izena').html(emanaldia['izena_' + currentLang])
-                        // Hurrengoa zatia iruzkindu dut momentuz hurrengoaFloat inoiz ez erakusteko
-                        /*
-                        $('#hurrengoaFloat').show()
-                        $('footer')[0].style.setProperty('padding-bottom', '120px', 'important');
-                        */
-						$('#agenda').show()
-						$('#agendaTopbar').show()
-						$('#agendaNavbar').show()
-                        hurrengoaJarrita = true
-                    }
+                    document.getElementById('emanaldiak').style.display = 'block'
+                    document.getElementById('emanaldiak-laster').style.display = 'none'
                     if (zerrendaDiv.children().length > 0) {
                         zerrendaDiv.append('<div class="emanaldi-sep"></div>')
                     }
@@ -160,13 +170,13 @@ function bilatuEmanaldia() {
                         ikonoa = '&ensp;<i class="fa fa-chevron-circle-right"></i>'
                     }
                     let orduaNormal = data.toLocaleTimeString('es-ES', {hour: '2-digit', minute:'2-digit'})
+                    let dataString = getDateString(data, currentLang)
                     let emanaldiDiv = $(
                         '<div>'+
                             '<p class="tituloProg"' + atributuak + '><b>' + emanaldia['izena_' + currentLang] + '</b>' + ikonoa + '</p>' +
                             '<div class="emanaldi-info">' +
                                 '<div>' +
-                                    '<i class="fa fa-calendar fa-fw" style="padding-right:10px;"></i>' + 
-                                    emanaldia['data_' + currentLang] + ', ' + emanaldia['asteko_eguna_' + currentLang] +
+                                    '<i class="fa fa-calendar fa-fw" style="padding-right:10px;"></i>' + dataString +
                                 '</div>' +
                                 '<div>' +
                                     '<i class="fa fa-clock-o fa-fw" style="padding-right:10px;"></i>' +

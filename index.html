@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="./css/styles.css">
 <link rel="stylesheet" href="./css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="./js/lang.js"></script>
 <script src="./js/kamerata.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,8 +32,8 @@
     <a href="#musika" class="w3-bar-item barLink header-text hide-topbar-small lang" key="musika">
     <a href="#kontaktua" class="w3-bar-item barLink header-text hide-topbar-small lang" key="kontaktua">
 	  <a href="#agenda" id="agendaTopbar" class="w3-bar-item barLink header-text hide-topbar-small lang" key="agenda">
-	  <a class="w3-bar-item barLink header-text w3-right hide-topbar-small langButton" onclick="ezarriHizkuntza('es')" key="es"><b>Castellano</b></a>
-    <a class="w3-bar-item barLink header-text w3-right hide-topbar-small langButton" onclick="ezarriHizkuntza('eu')" key="eu"><b>Euskara</b></a>
+	  <a class="w3-bar-item barLink header-text w3-right hide-topbar-small langButton" onclick="setLang('es')" key="es"><b>Castellano</b></a>
+    <a class="w3-bar-item barLink header-text w3-right hide-topbar-small langButton" onclick="setLang('eu')" key="eu"><b>Euskara</b></a>
 	  <div class="vl w3-right hide-topbar-small"></div>
   </div>
 </div>
@@ -44,8 +45,8 @@
   <a href="#kontaktua" class="w3-bar-item w3-button w3-padding-large lang" key="kontaktua"></a>
   <a href="#agenda" id="agendaNavmenu" class="w3-bar-item w3-button w3-padding-large lang" key="agenda"></a>
   <div class="hl"></div>
-  <a class="w3-bar-item w3-button w3-padding-large langButton" onclick="ezarriHizkuntza('eu')" key="eu"><b>Euskara</b></a>
-  <a class="w3-bar-item w3-button w3-padding-large langButton" onclick="ezarriHizkuntza('es')" key="es"><b>Castellano</b></a>
+  <a class="w3-bar-item w3-button w3-padding-large langButton" onclick="setLang('eu')" key="eu"><b>Euskara</b></a>
+  <a class="w3-bar-item w3-button w3-padding-large langButton" onclick="setLang('es')" key="es"><b>Castellano</b></a>
 </div>
 
 <!--
@@ -315,7 +316,8 @@
   <div id="agendaDiv" class="w3-black">
       <div class="w3-container w3-content w3-padding-64 w3-black" style="max-width:800px">
         <h2 class="w3-wide w3-center lang" key="agenda"></h2>
-        <h4 class="w3-opacity w3-center lang" key="emanaldiak"></h4>
+        <h4 id="emanaldiak" class="w3-opacity w3-center lang" key="emanaldiak" style="display:none"></h4>
+        <h4 id="emanaldiak-laster" class="w3-opacity w3-center lang" key="laster_emanaldiak"></h4>
         <div id="emanaldi-lista" class="w3-padding-top-32"></div>
       </div>
   </div>

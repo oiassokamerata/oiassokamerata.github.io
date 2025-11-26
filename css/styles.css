@@ -393,18 +393,6 @@ table {
     display:none!important;
 }
 
-#fbLink:hover {
-    color: #0a5ac2; /* #1977F3 % 40 */
-}
-
-#igLink:hover {
-	color: #b3196e; /* #DF248C % 40 */
-}
-
-#ytLink:hover {
-    color: #cc0000; /* red % 40 */
-}
-
 #fbLink, #igLink, #ytLink {
     padding: 10px;
     display: inline-block;
@@ -412,9 +400,13 @@ table {
     line-height: 1;
 }
 
+#fbLink:hover, #igLink:hover, #ytLink:hover {
+    background-color: #ccc;
+}
+
 /* Logoa atzeko plano moduan erabiltzeko
 footer {
-	background-image: url(../img/logo_txuria.svg);
+    background-image: url(../img/logo_txuria.svg);
 }
 */
 

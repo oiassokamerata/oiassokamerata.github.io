@@ -40,7 +40,8 @@ eu = {
     "brahms_desk": "Aitzol Iturriagagoitia eta David Apellániz bakarlariekin",
     "moldaketa": "Moldaketa",
     "compositoras": "Emakume konpositoreak",
-    "dossier": "Programaren dosierra"
+    "dossier": "Programaren dosierra",
+    "laguntza": "Obra berriak sortzeko laguntza:"
 }
 
 es = {
@@ -85,7 +86,8 @@ es = {
     "brahms_desk": "Con los solistas Aitzol Iturriagagoitia eta David Apellániz",
     "moldaketa": "Arreglo",
     "compositoras": "Mujeres compositoras",
-    "dossier": "Dosier del programa"
+    "dossier": "Dosier del programa",
+    "laguntza": "Financiación para la creación de nuevas obras:"
 }
 
 strings = {

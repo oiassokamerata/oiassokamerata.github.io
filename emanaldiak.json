@@ -189,5 +189,30 @@
         "esteka_eu": "https://sarrerak.errenteria.eus/MusikasteGanberakoMusika?idioma=EU",
         "esteka_es": "https://sarrerak.errenteria.eus/MusikasteGanberakoMusika?idioma=ES",
         "esteka_mota": "sarrerak"
+    },
+    {
+        "izena_eu": "Abraham Cupeiro & Oiasso Kamerata",
+        "izena_es": "Abraham Cupeiro & Oiasso Kamerata",
+        "data_array": [2025, 11, 14, 18, 0],
+        "data_eu": "Abenduak 14",
+        "asteko_eguna_eu": "igandea",
+        "data_es": "14 de diciembre",
+        "asteko_eguna_es": "domingo",
+        "herria": "Azpeitia",
+        "aretoa": "Soreasu Antzokia",
+        "esteka_eu": "https://www.kulturaz.eus/agenda/abraham-cupeiro",
+        "esteka_es": "https://www.kulturaz.eus/agenda/abraham-cupeiro",
+        "esteka_mota": "sarrerak"
+    },
+    {
+        "izena_eu": "Urmaiz abesbatza & Oiasso Kamerata",
+        "izena_es": "Urmaiz abesbatza & Oiasso Kamerata",
+        "data_array": [2025, 11, 27, 19, 0],
+        "data_eu": "Abenduak 27",
+        "asteko_eguna_eu": "larunbata",
+        "data_es": "27 de diciembre",
+        "asteko_eguna_es": "sábado",
+        "herria": "Ormaiztegi",
+        "aretoa": "San Andres eliza"
     }
 ]

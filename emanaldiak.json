@@ -214,5 +214,35 @@
         "asteko_eguna_es": "sábado",
         "herria": "Ormaiztegi",
         "aretoa": "San Andres eliza"
+    },
+    {
+        "izena_eu": "Bizitzaren harian",
+        "izena_es": "Bizitzaren harian",
+        "programa": "bizitza",
+        "data_array": [2026, 4, 17, 19, 0],
+        "data_eu": "Maiatzak 17",
+        "asteko_eguna_eu": "igandea",
+        "data_es": "17 de mayo",
+        "asteko_eguna_es": "domingo",
+        "herria": "Irun",
+        "aretoa": "Amaia KZ",
+        "esteka_eu": "https://www.irun.org/eu/agenda/ekintzak/20328-oiasso-kamerata-aitzol-iturriaga-goitia-biolina-eu",
+        "esteka_es": "https://www.irun.org/es/agenda/eventos/20327-oiasso-kamerata-aitzol-iturriaga-goitia-biolina",
+        "esteka_mota": "sarrerak"
+    },
+    {
+        "izena_eu": "Barroko ala ez barroko?",
+        "izena_es": "¿Barroco o no barroco?",
+        "programa": "barroko",
+        "data_array": [2026, 6, 4, 21, 0],
+        "data_eu": "Uztailak 4",
+        "asteko_eguna_eu": "larunbata",
+        "data_es": "4 de julio",
+        "asteko_eguna_es": "sábado",
+        "herria": "Miranda de Ebro",
+        "aretoa": "Iglesia de los SSCC",
+        "esteka_eu": "https://festivalgregoriosolabarrieta.com/",
+        "esteka_es": "https://festivalgregoriosolabarrieta.com/",
+        "esteka_mota": "sarrerak"
     }
 ]
